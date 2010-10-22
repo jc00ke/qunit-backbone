@@ -1,0 +1,8 @@
+#vendors address { font-style: normal; }
+#vendors li .name, #vendors li address, #vendors li .email,#vendors li .solutions, #vendors li .credentials { display: block; }
+#vendors li address:before     { content: "Address: "; font-weight: bold; }
+#vendors li .phone:before       { content: "Phone: "; font-weight: bold; }
+#vendors li .email:before       { content: "Email: "; font-weight: bold; }
+#vendors li .solutions:before   { content: "Solutions: "; font-weight: bold; }
+#vendors li .credentials:before { content: "Credentials: "; font-weight: bold; }
+#vendors li .supports:before    { content: "Supports: "; font-weight: bold; }
