@@ -37,10 +37,15 @@ $(document).ready(function() {
 
         $("#vendors li").each(function() {
             var v = $(this);
-            var certList =  _.map($('.solutions', v).html().split(','), function(solution) {
+            var certList =  _($('.solutions', v).html().split(',')).chain()
+                            .map(function(solution) {
                                 var name = $.trim(solution);
                                 return new Cert({name: name});
-                            });
+                            })
+                            .sortBy(function(solution) {
+                                return solution.get("name");
+                            })
+                            .value();
 
             vendorList.add(
                 new Vendor({
@@ -51,8 +56,12 @@ $(document).ready(function() {
         });
 
         equals(78, vendorList.length, "should be the known count of 78");
-        equals(vendorList.at(0).get('certs').map(function(c) { return c.get('name') } ), ["Energy Audit", "Solar Electric"], "first vendor's certs");
-        equals(vendorList.at(0).get('name'), "A Bright Idea Electrical", "check name of first model in collection");
+        var first = vendorList.at(0);
+        var firstCerts = first.get("certs").map(function(c){return c.get("name")});
+
+        var expectedCerts = ["Energy Audit", "Solar Electric"];
+        same(firstCerts, expectedCerts, "first vendor's certs");
+        equals(first.get('name'), "A Bright Idea Electrical", "check name of first model in collection");
     });
 
 });
