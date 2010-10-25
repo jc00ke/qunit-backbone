@@ -21,9 +21,12 @@ var VendorList = Backbone.Collection.extend({
                         .sortBy(function(n){ return n; })
                         .uniq(true)
                         .value();
-
                     }
         } catch(exception) {
+            if (_.isUndefined(window.errors)) {
+                window.errors = [];
+            }
+            window.errors.push(exception);
             alert(exception);
         }
     }

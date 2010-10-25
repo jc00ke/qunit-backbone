@@ -68,7 +68,12 @@ $(document).ready(function() {
         ]);
         var expected = ["apple", "bar", "baz", "foo", "orange"];
         same(this.list.getUnique('credentials'), expected, "should be unique & sorted");
+    });
 
+    test("check an error is thrown on bad getUnique arg", function() {
+        expect(1);
+        this.list.getUnique('asdf');
+        equal(window.errors.length, 1, "only get one error");
     });
 
     module("Solution sanity check");
