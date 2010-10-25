@@ -7,10 +7,10 @@ var VendorList = Backbone.Collection.extend({
     comparator: function(vendor) { return vendor.get('name') }
 });
 
-var Cert = Backbone.Model.extend({
+var Solution = Backbone.Model.extend({
 });
 
-var CertList = Backbone.Collection.extend({
-    model: Cert,
-    comparator: function(cert) { return cert.get('name'); },
+var SolutionList = Backbone.Collection.extend({
+    model: Solution,
+    comparator: function(solution) { return solution.get('name'); },
 });
