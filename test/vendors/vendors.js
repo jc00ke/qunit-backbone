@@ -48,7 +48,7 @@ $(document).ready(function() {
             new Solution({name: "baz"})
         ]);
         var expected = ["apple", "bar", "baz", "foo", "orange"];
-        same(this.list.uniqueSolutions(), expected, "should be unique & sorted");
+        same(this.list.getUnique('solutions'), expected, "should be unique & sorted");
     });
 
     test("check unique credentials", function() {
@@ -67,7 +67,7 @@ $(document).ready(function() {
             new Credential({name: "baz"})
         ]);
         var expected = ["apple", "bar", "baz", "foo", "orange"];
-        same(this.list.uniqueCredentials(), expected, "should be unique & sorted");
+        same(this.list.getUnique('credentials'), expected, "should be unique & sorted");
 
     });
 
