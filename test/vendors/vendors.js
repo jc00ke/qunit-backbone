@@ -15,19 +15,60 @@ $(document).ready(function() {
         ok(!_.include(vendor.get('solutions'), 'red'), "red solution is not included");
     });
 
-    module("VendorList sanity check");
+    module("VendorList sanity check", {
+        setup: function() {
+            this.list = new VendorList;
+            this.list.add(new Vendor({ name: "Vendor 2" }));
+            this.list.add(new Vendor({ name: "Vendor 1" }));
+            this.list.add(new Vendor({ name: "A Vendor" }));
+            this.list.add(new Vendor({ name: "Some Vendor" }));
+        }
+    });
 
     test("check ordering", function() {
         expect(1);
-        var list = new VendorList;
-        list.add(new Vendor({ name: "Vendor 2" }));
-        list.add(new Vendor({ name: "Vendor 1" }));
-        list.add(new Vendor({ name: "A Vendor" }));
-        list.add(new Vendor({ name: "Some Vendor" }));
-
         var expected = ["A Vendor", "Some Vendor", "Vendor 1", "Vendor 2"];
-        var actual = list.pluck("name");
+        var actual = this.list.pluck("name");
         same(actual, expected, "is maintained by comparator");
+    });
+
+    test("check unique solutions", function() {
+        expect(1);
+        this.list.at(0).solutions = new SolutionList([
+            new Solution({name: "foo"}),
+            new Solution({name: "bar"}),
+            new Solution({name: "baz"})
+        ]);
+        this.list.at(2).solutions = new SolutionList([
+            new Solution({name: "foo"}),
+            new Solution({name: "apple"}),
+            new Solution({name: "orange"})
+        ]);
+        this.list.at(3).solutions = new SolutionList([
+            new Solution({name: "baz"})
+        ]);
+        var expected = ["apple", "bar", "baz", "foo", "orange"];
+        same(this.list.uniqueSolutions(), expected, "should be unique & sorted");
+    });
+
+    test("check unique credentials", function() {
+        expect(1);
+        this.list.at(0).credentials = new CredentialList([
+            new Credential({name: "foo"}),
+            new Credential({name: "bar"}),
+            new Credential({name: "baz"})
+        ]);
+        this.list.at(2).credentials = new CredentialList([
+            new Credential({name: "foo"}),
+            new Credential({name: "apple"}),
+            new Credential({name: "orange"})
+        ]);
+        this.list.at(3).credentials = new CredentialList([
+            new Credential({name: "baz"})
+        ]);
+        var expected = ["apple", "bar", "baz", "foo", "orange"];
+        same(this.list.uniqueCredentials(), expected, "should be unique & sorted");
+
     });
 
     module("Solution sanity check");
