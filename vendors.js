@@ -47,3 +47,11 @@ var CredentialList = Backbone.Collection.extend({
     model: Credential,
     comparator: function(credential) { return credential.get('name'); },
 });
+
+var CheckboxRow = Backbone.View.extend({
+    render: function() {
+        $(this.el).html(Mustache.to_html(this.template, this.model.toJSON()));
+        return this;
+    },
+    template: '<div><label><input type="checkbox" />{{name}} <span class="count">({{count}})</span></label></div>'
+});

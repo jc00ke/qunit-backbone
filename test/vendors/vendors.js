@@ -1,6 +1,7 @@
 
 $(document).ready(function() {
 
+/********************************************/
     module("Vendor sanity check");
 
     test("properties", function() {
@@ -15,6 +16,10 @@ $(document).ready(function() {
         ok(!_.include(vendor.get('solutions'), 'red'), "red solution is not included");
     });
 
+
+
+
+/********************************************/
     module("VendorList sanity check", {
         setup: function() {
             this.list = new VendorList;
@@ -76,6 +81,10 @@ $(document).ready(function() {
         equal(window.errors.length, 1, "only get one error");
     });
 
+
+
+
+/********************************************/
     module("Solution sanity check");
 
     test("properties", function() {
@@ -85,6 +94,31 @@ $(document).ready(function() {
         equals(solution.get('name'), "some solution", "name works");
     });
 
+
+
+
+/********************************************/
+    module("CheckboxRow view", {
+        setup: function() {
+            this.solution = new Solution({name: "foo", count: 10});
+        }
+    });
+
+    test("render", function() {
+        expect(2);
+        var rendered = new CheckboxRow({model: this.solution}).render();
+        var html = rendered.el.innerHTML;
+        var label = $('label', html);
+        var count = $('.count', html);
+        var cb = $(':checkbox', html);
+        equal(label.text(), "foo (10)", "label value should be correct");
+        equal(count.text(), "(10)", "count should be correct");
+    });
+
+
+
+
+/********************************************/
     module("SolutionList sanity check");
 
     test("check ordering", function() {
@@ -100,6 +134,10 @@ $(document).ready(function() {
         same(actual, expected, "is maintained by comparator");
     });
 
+
+
+
+/********************************************/
     module("Credential sanity check");
 
     test("properties", function() {
@@ -109,6 +147,10 @@ $(document).ready(function() {
         equals(cert.get('name'), "some cert", "name works");
     });
 
+
+
+
+/********************************************/
     module("CredentialList sanity check");
 
     test("check ordering", function() {
@@ -124,6 +166,10 @@ $(document).ready(function() {
         same(actual, expected, "is maintained by comparator");
     });
 
+
+
+
+/********************************************/
     module("Vendor Collection", {
         setup: function() {
             var that = this;
@@ -190,5 +236,4 @@ $(document).ready(function() {
         same(firstCredentials, expectedCredentials, "first vendor's credentials");
         equals(first.get('name'), "Advanced Home Energy", "check name of first model in collection");
     });
-
 });
