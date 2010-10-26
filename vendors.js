@@ -1,6 +1,11 @@
 
 var Vendor = Backbone.Model.extend({
+    serves: function(t) {
+        return _(this.get("propertyType")).include(t);
+    }
 });
+
+Vendor.servesRegExp = /(residential|commercial)/i;
 
 var VendorList = Backbone.Collection.extend({
     model: Vendor,
@@ -27,7 +32,7 @@ var VendorList = Backbone.Collection.extend({
                 window.errors = [];
             }
             window.errors.push(exception);
-            alert(exception);
+            //alert(exception);
         }
     }
 });
@@ -49,9 +54,10 @@ var CredentialList = Backbone.Collection.extend({
 });
 
 var CheckboxRow = Backbone.View.extend({
+    tagName: 'div',
     render: function() {
-        $(this.el).html(Mustache.to_html(this.template, this.model.toJSON()));
+        $(this.el).html(_.template(this.template, this.model.toJSON()));
         return this;
     },
-    template: '<div><label><input type="checkbox" />{{name}} <span class="count">({{count}})</span></label></div>'
+    template: $('#checkboxrow_template').html()
 });

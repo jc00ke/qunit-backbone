@@ -4,6 +4,12 @@
         <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
         <title>Vendor Marketplace Prototype Test</title>
         <link rel="stylesheet" href="../qunit.css" />
+        <style>
+            script {
+                display: none;
+            }
+        </style>
+
     </head>
     <body>
        <h1 id="qunit-header">QUnit example</h1>
@@ -815,15 +821,20 @@
     </li>
 </ul>
 
+    <script type="text/template" id="checkboxrow_template">
+        <label>
+            <input type="checkbox" /><%= name %> <span class="count">(<%= count %>)</span>
+        </label>
+    </script>
 
        <script src="../../jquery.min.js"></script>
        <script src="../qunit.js"></script>
-       <script src="../../mustache.js"></script>
        <script src="../../underscore-min.js"></script>
        <script src="../../json2.js"></script>
        <script src="../../backbone-min.js"></script>
        <script src="../../vendors.js"></script>
        <script src="vendors.js"></script>
+
     </body>
 
 </html>

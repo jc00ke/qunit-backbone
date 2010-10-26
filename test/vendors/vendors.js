@@ -5,15 +5,23 @@ $(document).ready(function() {
     module("Vendor sanity check");
 
     test("properties", function() {
-        expect(4);
+        expect(11);
         var vendor = new Vendor({
             name: "Bob's HVAC",
-            solutions: ["hvac", "green"]
+            solutions: ["hvac", "green"],
+            propertyType: ["commercial", "residential"]
         });
         ok(vendor, "created");
         equals(vendor.get('name'), "Bob's HVAC", "name works");
         ok(_.include(vendor.get('solutions'), 'hvac'), "hvac solution is included");
         ok(!_.include(vendor.get('solutions'), 'red'), "red solution is not included");
+        ok(vendor.serves("commercial"), "should serve commercial");
+        ok(vendor.serves("residential"), "should serve residential");
+        ok(!vendor.serves("asdf"), "should not serve asdf");
+        ok("Residential and commercial".match(Vendor.servesRegExp), "should match residential & commercial");
+        ok("Residential".match(Vendor.servesRegExp), "should match residential");
+        ok("Commercial".match(Vendor.servesRegExp), "should match commercial");
+        ok(!"asdf".match(Vendor.servesRegExp), "should not match asdf");
     });
 
 
@@ -108,10 +116,9 @@ $(document).ready(function() {
         expect(2);
         var rendered = new CheckboxRow({model: this.solution}).render();
         var html = rendered.el.innerHTML;
-        var label = $('label', html);
         var count = $('.count', html);
         var cb = $(':checkbox', html);
-        equal(label.text(), "foo (10)", "label value should be correct");
+        equal(rendered.el.textContent.trim(), "foo (10)", "label value should be correct");
         equal(count.text(), "(10)", "count should be correct");
     });
 
@@ -203,11 +210,18 @@ $(document).ready(function() {
                                     .value()
                                 );
                 }
+                var propertyTypeString = $('.serves', v).html();
+                var propertyTypeMatches = propertyTypeString.match(Vendor.servesRegExp);
+                var propertyTypes = [];
+                if (propertyTypeMatches) {
+                    propertyTypes = _(propertyTypeMatches).invoke("toLowerCase");
+                }
                 that.vendorList.add(
                     new Vendor({
                         name:           $('.name', v).text(),
                         solutions:      solutionList,
-                        credentials:    credentialList
+                        credentials:    credentialList,
+                        propertyType:   propertyTypes
                     })
                 );
             });
@@ -235,5 +249,34 @@ $(document).ready(function() {
         var expectedCredentials = ["BPI Certified Building Analyst Professional"];
         same(firstCredentials, expectedCredentials, "first vendor's credentials");
         equals(first.get('name'), "Advanced Home Energy", "check name of first model in collection");
+    });
+
+    test("serves", function() {
+        expect(3);
+
+        // test "residential"
+        var actualResidentials = _(this.vendorList.map(function(v) {
+                                    if(v.serves("residential"))
+                                        return v.get("name");
+                                })).chain().compact();
+        var expectedResidential = this.vendorList.detect(function(v){ return v.get("name") === "BECCA Costruction"; }).get("name");
+
+        // test "commercial"
+        var actualCommercials = _(this.vendorList.map(function(v) {
+                                    if(v.serves("commercial"))
+                                        return v.get("name");
+                                })).chain().compact();
+        var expectedCommercial = this.vendorList.detect(function(v){ return v.get("name") === "EMCo Systems Solutions, Inc."; }).get("name");
+
+        // test both
+        var actualBoth = _(this.vendorList.map(function(v) {
+                                    if(v.serves("commercial") && v.serves("residential"))
+                                        return v.get("name");
+                                })).chain().compact();
+        var expectedBoth = this.vendorList.detect(function(v){ return v.get("name") === "Voelker Plumbing"; }).get("name");
+
+        ok(actualResidentials.include(expectedResidential), "serves pulls correct residential");
+        ok(actualCommercials.include(expectedCommercial), "serves pulls correct commercial");
+        ok(actualBoth.include(expectedBoth), "serves pulls both correctly");
     });
 });
