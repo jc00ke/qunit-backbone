@@ -35,6 +35,9 @@ $(document).ready(function() {
             this.list.add(new Vendor({ name: "Vendor 1" }));
             this.list.add(new Vendor({ name: "A Vendor" }));
             this.list.add(new Vendor({ name: "Some Vendor" }));
+        },
+        teardown: function() {
+            window.errors = null;
         }
     });
 
@@ -69,7 +72,8 @@ $(document).ready(function() {
         this.list.at(0).credentials = new CredentialList([
             new Credential({name: "foo"}),
             new Credential({name: "bar"}),
-            new Credential({name: "baz"})
+            new Credential({name: "baz"}),
+            new Credential({name: "apple"})
         ]);
         this.list.at(2).credentials = new CredentialList([
             new Credential({name: "foo"}),
@@ -113,13 +117,19 @@ $(document).ready(function() {
     });
 
     test("render", function() {
-        expect(2);
-        var rendered = new CheckboxRow({model: this.solution}).render();
-        var html = rendered.el.innerHTML;
+        expect(4);
+        this.solution.view = new CheckboxRow({model: this.solution});
+        var html = this.solution.view.render().el.innerHTML;
         var count = $('.count', html);
         var cb = $(':checkbox', html);
-        equal(rendered.el.textContent.trim(), "foo (10)", "label value should be correct");
+        equal(this.solution.view.el.textContent.trim(), "foo (10)", "label value should be correct");
         equal(count.text(), "(10)", "count should be correct");
+
+        this.solution.set({"count": 20});
+        equal(this.solution.view.el.textContent.trim(), "foo (20)", "label value should be correct");
+
+        this.solution.set({"name": "bar"});
+        equal(this.solution.view.el.textContent.trim(), "bar (20)", "label value should be correct");
     });
 
 
@@ -180,7 +190,7 @@ $(document).ready(function() {
     module("Vendor Collection", {
         setup: function() {
             var that = this;
-            that.vendorList = new VendorList;
+            window.Vendors = new VendorList;
 
             $("#vendors li").each(function() {
                 var v = $(this);
@@ -216,7 +226,7 @@ $(document).ready(function() {
                 if (propertyTypeMatches) {
                     propertyTypes = _(propertyTypeMatches).invoke("toLowerCase");
                 }
-                that.vendorList.add(
+                Vendors.add(
                     new Vendor({
                         name:           $('.name', v).text(),
                         solutions:      solutionList,
@@ -228,23 +238,34 @@ $(document).ready(function() {
         }
     });
 
+    test("insert checkboxes", function() {
+        //expect(1);
+        var solutions = Vendors.getUnique("solutions");
+        console.log(Vendors);
+        console.log(Vendors.getUnique("solutions"));
+        _(Vendors.getUnique("solutions")).each(function(s){ console.log(s); });
+    });
+
     test("length", function() {
         expect(1);
-        equals(78, this.vendorList.length, "should be the known count of 78");
+        equals(78, Vendors.length, "should be the known count of 78");
     });
 
     test("solutions", function() {
-        expect(2);
-        var first = this.vendorList.at(0);
+        expect(3);
+        var first = Vendors.at(0);
         var firstSolutions = first.get("solutions").pluck('name');
         var expectedSolutions = ["Energy Audit", "Solar Electric"];
         same(firstSolutions, expectedSolutions, "first vendor's solutions");
         equals(first.get('name'), "A Bright Idea Electrical", "check name of first model in collection");
+        // use map/reduce to make sure the solutions list is unique.
+        // right now it is being set to [] which is strange, strange indeed.
+        ok(false, "fix me");
     });
 
     test("credentials", function() {
         expect(2);
-        var first = this.vendorList.detect(function(v){ return v.get("credentials").length > 0; });
+        var first = Vendors.detect(function(v){ return v.get("credentials").length > 0; });
         var firstCredentials = first.get("credentials").pluck('name');
         var expectedCredentials = ["BPI Certified Building Analyst Professional"];
         same(firstCredentials, expectedCredentials, "first vendor's credentials");
@@ -255,25 +276,25 @@ $(document).ready(function() {
         expect(3);
 
         // test "residential"
-        var actualResidentials = _(this.vendorList.map(function(v) {
+        var actualResidentials = _(Vendors.map(function(v) {
                                     if(v.serves("residential"))
                                         return v.get("name");
                                 })).chain().compact();
-        var expectedResidential = this.vendorList.detect(function(v){ return v.get("name") === "BECCA Costruction"; }).get("name");
+        var expectedResidential = Vendors.detect(function(v){ return v.get("name") === "BECCA Costruction"; }).get("name");
 
         // test "commercial"
-        var actualCommercials = _(this.vendorList.map(function(v) {
+        var actualCommercials = _(Vendors.map(function(v) {
                                     if(v.serves("commercial"))
                                         return v.get("name");
                                 })).chain().compact();
-        var expectedCommercial = this.vendorList.detect(function(v){ return v.get("name") === "EMCo Systems Solutions, Inc."; }).get("name");
+        var expectedCommercial = Vendors.detect(function(v){ return v.get("name") === "EMCo Systems Solutions, Inc."; }).get("name");
 
         // test both
-        var actualBoth = _(this.vendorList.map(function(v) {
+        var actualBoth = _(Vendors.map(function(v) {
                                     if(v.serves("commercial") && v.serves("residential"))
                                         return v.get("name");
                                 })).chain().compact();
-        var expectedBoth = this.vendorList.detect(function(v){ return v.get("name") === "Voelker Plumbing"; }).get("name");
+        var expectedBoth = Vendors.detect(function(v){ return v.get("name") === "Voelker Plumbing"; }).get("name");
 
         ok(actualResidentials.include(expectedResidential), "serves pulls correct residential");
         ok(actualCommercials.include(expectedCommercial), "serves pulls correct commercial");

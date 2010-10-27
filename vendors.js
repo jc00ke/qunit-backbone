@@ -13,9 +13,7 @@ var VendorList = Backbone.Collection.extend({
 
     getUnique: function(list) {
         try {
-            if (list != "credentials" && list != "solutions") {
-                throw new Error("Must pass in either 'credentials' or 'solutions'");
-            } else {
+            if (list === "credentials" || list === "solutions") {
                 var names = this.map(function(v){
                     var x = v[list];
                     if (x) { return x.pluck("name"); }
@@ -26,11 +24,11 @@ var VendorList = Backbone.Collection.extend({
                         .sortBy(function(n){ return n; })
                         .uniq(true)
                         .value();
-                    }
-        } catch(exception) {
-            if (_.isUndefined(window.errors)) {
-                window.errors = [];
+            } else {
+                throw new Error("Must pass in either 'credentials' or 'solutions'");
             }
+        } catch(exception) {
+            window.errors = (window.errors || [])
             window.errors.push(exception);
             //alert(exception);
         }
@@ -55,9 +53,26 @@ var CredentialList = Backbone.Collection.extend({
 
 var CheckboxRow = Backbone.View.extend({
     tagName: 'div',
+    initialize: function() {
+        _.bindAll(this, 'render');
+        this.model.bind('change', this.render);
+        this.model.view = this;
+    },
     render: function() {
-        $(this.el).html(_.template(this.template, this.model.toJSON()));
+        $(this.el).html(this.template(this.model.toJSON()));
         return this;
     },
-    template: $('#checkboxrow_template').html()
+    template: _.template($('#checkboxrow_template').html())
+});
+
+var CheckboxContainer = Backbone.View.extend({
+    el: $("#solution_checkboxes"),
+
+    addOne: function(solution) {
+        var view = new CheckboxRow({model: solution});
+        this.el.append(view.render().el);
+    },
+    addAll: function() {
+        SolutionList.each(this.addOne);
+    }
 });

@@ -12,861 +12,818 @@
 
     </head>
     <body>
-       <h1 id="qunit-header">QUnit example</h1>
-       <h2 id="qunit-banner"></h2>
-       <h2 id="qunit-userAgent"></h2>
-       <ol id="qunit-tests"> </ol>
+        <h1 id="qunit-header">QUnit example</h1>
+        <h2 id="qunit-banner"></h2>
+        <h2 id="qunit-userAgent"></h2>
+        <ol id="qunit-tests"> </ol>
 
-       <script type="text/javascript">
-            var serviceCategories = {
-                "Commerical Energy Efficiency":[],
-                "Energy Efficiency":[
-                    "Air Sealing & Insulation",
-                    "Duct Sealing",
-                    "Attic Fans",
-                    "Air Filtration",
-                    "Building Envelope",
-                    "Duct Leakage",
-                    "Furnace Ventilator Fan",
-                    "Room Fans",
-                    "Weather-Stripping",
-                    "Whole House Fan",
-                    "Correction of Duct Leakage",
-                    "Correction of Thermal Barrier Ducts",
-                    "Home Sealing"
-                ],
-                "Stormwater Management":[
-                    "Cistern to Side Sewer",
-                    "Cistern to Conveyance Channel",
-                    "Cistern",
-                    "Rain Barrel",
-                    "Cistern to Rain Garden"
-                ],
-                "Cool Roof":[],
-                "Renewable Energy":[
-                    "Solar Electric"
-                ],
-                "Commercial- Water Conservation":[],
-                "Home EV Charging System":[],
-                "Wind Turbines":[],
-                "Commercial- Electric and Lighting":[],
-                "Weatherization":[],
-                "Water Conservation":[
-                    "Faucet Aerators",
-                    "Low Flow Showerheads",
-                    "Low Flow Toilets",
-                    "Demand Initiated Water Softeners",
-                    "Other Water Efficiency Fixtures or Devices"
-                ],
-                "Indoor Water Conservation":[],
-                "HVAC-Commercial":[],
-                "Outdoor Water Conservation":[]
-            };
-       </script>
+        <div id="solution_checkboxes"></div>
 
-<ul id="vendors">
-    <li>
-    <a class="name" href="http://www.beccaconstruction.com/">BECCA Costruction</a>
-    <address>627 Prentiss St, San Francisco, California 94110 </address>
-    <span class="phone">415.533.7215</span>
-    <span class="email">glenn@beccaconstruction.com</span>
-    <span class="solutions">Insulation, Air Sealing and Ventilation, Electrical and Lighting, Windows and Doors</span>
-    <span class="serves">Residential and commercial customers</span>
-    general building contractor specializing in residential and commercial construction.
-    </li>
-    <li>
-    <a class="name" href="http://www.woodenwindow.com/">Wooden Window, Inc.</a>
-    <address>849 29th Street, Emeryville, California 94608 </address>
-    <span class="phone">510 893-1157</span>
-    <span class="email">bill@woodenwindow.com</span>
-    <span class="solutions">Windows and Doors</span>
-    <span class="serves">Residential and commercial customers</span>
-    Wood Doors and Windows (and Storm Windows) for vintage homes and buildings built 1880-1940 . Weatherization and repair of your existing fenestration up to new custom wood window sash with high efficiency glass and customized weatherstripping.Historically Correct.  NO Vinyl or Aluminum.
-    </li>
-    <li>
-    <a class="name" href="http://www.greenroofelectric.com/">Green Roof Electric</a>
-    <address>220 Bush St Suite 424, San Francisco, California 94104 </address>
-    <span class="phone">707-545-0580</span>
-    <span class="email">Dwhite@greenroofelectric.com</span>
-    <span class="solutions">Solar Electric</span>
-    <span class="serves">Residential customers</span>
-    Green Roof Electric is a residential solar electric installation firm dedicated to building a sustainable future. As a full-service installation company we handle all aspects of the installation in house.  We evaluate a home's roof and electrical needs, design and install the panels, and handle any permitting and rebate paperwork on the customer's behalf.
-    Let our team of solar experts, electricians, and financial analysts evaluate your home and provide you with the most comprehensive financial projections of making the solar investment.
-    </li>
-    <li>
-    <a class="name" href="http://www.bangforyourgreenbuck.com/">Bang For your Green Buck &amp; JW Plumbing</a>
-    <address>118 Virginia Ave, San Francisco, California 94110 </address>
-    <span class="phone">650 804 2401</span>
-    <span class="email">gregmbullock@gmail.com</span>
-    <span class="solutions">Water Heating, High Efficiency Plumbing Fixtures, Solar Thermal, Insulation, Air Sealing and Ventilation, Energy Audit, Landscape Irrigation Systems</span>
-    <span class="serves">Residential and commercial customers</span>
-    Making the wisest home investments for your money and the Earth.  Specializing in water recycling and efficiency, greywater systems, sustainable landscapes, solar water heating.
-    </li>
-    <li>
-    <a class="name" href="http://www.diamondhomerestoration.com/">Diamond Home Restoration</a>
-    <address>1226 43rd Avenue, San Francisco, California 94122 </address>
-    <span class="phone">415-722-5034</span>
-    <span class="email">pace@diamondhomerestoration.com</span>
-    <span class="solutions">Air Sealing and Ventilation, Heating and Cooling, Water Heating, Solar Electric, Solar Thermal, Insulation, Electrical and Lighting, Windows and Doors</span>
-    <span class="serves">Residential customers</span>
-    Diamond Home Restoration is a restoration and remodel company.  Our focus is on strong communication, clear estimates and billing, quality craftsmanship, with an eye towards sustainable practices.  We are general contractors who work frequently on design/build projects and have a strong seismic background.  Our trusted relationships with our subcontractors ensures your custom home gets completed on time and on budget.  We are quietly building a large family of happy homes.
-    </li>
-    <li>
-    <a class="name" href="http://www.luntmarymor.com/">The Lunt Marymor Company</a>
-    <address>1270 45th Street, Emeryville, California 94608 </address>
-    <span class="phone">510-985-2889</span>
-    <span class="email">Leigh@LuntMarymor.com</span>
-    <span class="solutions">Water Heating, High Efficiency Plumbing Fixtures, Non-Residential High Efficiency Plumbing Fixtures, Solar Thermal</span>
-    <span class="serves">Residential and commercial customers</span>
-    Plumbing, Hydronic Heating, and Fire Sprinkler Contractors. Specializing in residential and light commercial new construction, remodel, and service and repair. Build-It Green Certified. Certified Green Plumber. PHCC.
-    </li>
-    <li>
-    <a class="name" href="http://www.equilibriumfs.com/">Equilibrium Energy + Design</a>
-    <address>214 Grand Ave, Oakland, California 94610 </address>
-    <span class="phone">510-931-6361</span>
-    <span class="email">laura@equilibriumfs.com</span>
-    <span class="solutions">Safety, Energy Audit</span>
-    <span class="credentials">BPI Certified Building Analyst Professional, BPI Certified Envelope Professional</span>
-    <span class="serves">Residential customers</span>
-    Get it right the first time. An Equilibrium Energy Upgrade Report will tell you what steps to take to make your home exactly you want it to be – Comfortable, Efficient and Healthy.  Let us take the guesswork out of the process.  We’ll be the detectives so you don’t have to be.  Equilibrium Energy + Design is an Independent Third Party Energy Auditor.
-    </li>
-    <li>
-    <a class="name" href="http://www.betterearthconstruction.com/">Better Earth Construction</a>
-    <address>240 Gates St, San Francisco, California 94110 </address>
-    <span class="phone">415-254-8034</span>
-    <span class="email">andrew@betterearthconstruction.com</span>
-    <span class="solutions">Air Sealing and Ventilation, Insulation, Safety, Heating and Cooling, Energy Audit, Water Heating, Geothermal, High Efficiency Plumbing Fixtures, Non-Residential High Efficiency Plumbing Fixtures, Solar Electric, Solar Thermal, Electrical and Lighting, Landscape Irrigation Systems</span>
-    <span class="serves">Residential and commercial customers</span>
-    </li>
-    <li>
-    <a class="name" href="http://energy-able.org/">Energy-Able, Inc.</a>
-    <address>16 Kenrick Drive, San Anselmo, California 94960 </address>
-    <span class="phone">415-259-9653</span>
-    <span class="email">andy@energy-able.org</span>
-    <span class="solutions">Air Sealing and Ventilation, Safety, Energy Audit</span>
-    <span class="credentials">Home Performance with Energy Star, BPI Certified Building Analyst Professional, BPI Certified Energy Efficient Multifamily Building Operations Specialist, BPI Certified Envelope Professional</span>
-    <span class="serves">Residential and commercial customers</span>
-    Energy-Able is a California non-profit providing energy efficiency services and retrofit proposals to consumers. The Energy-Able team is BPI certified for residential, commercial and multi-family building audits and has extensive building contracting and plumbing contracting experience. We will conduct a whole house energy audit with a full report on our findings and a cost estimate to complete the necessary and appropriate energy upgrade repairs. We are BPI trainers under CBPCA and CACTUS, LEED AP, NABCEP, HERS raters, and Green Point Raters. We are licensed, insured, and bonded and can provide the full array of services necessary for building owners to participate in the San Francisco Green Finance program.
-    </li>
-    <li>
-    <a class="name" href="http://www.buildingsolutions.com/">Building Solutions</a>
-    <address>1757 East Bayshore Road Suite 24, Redwood City, California 94063 </address>
-    <span class="phone">866-899-2517</span>
-    <span class="email">info@buildingsolutions.com</span>
-    <span class="solutions">Air Sealing and Ventilation, Safety, Heating and Cooling, Energy Audit, Water Heating, Solar Thermal, Insulation</span>
-    <span class="credentials">Home Performance with Energy Star</span>
-    <span class="serves">Residential and commercial customers</span>
-    Building Solutions has over 5 years experience as one of the Bay Area's premier Home Performance Testing and Contracting companies.
-    Whether our clients are uncomfortable in their homes, concerned by poor indoor air quality, or frustrated by growing utility bills, Building Solutions' performance test and subsequent reporting provides all of the details necessary to make the most informed and effective decisions to improve home performance.
-    And with the experience, knowledge and professionalism associated with our contracting team, our retrofits are conducted to the highest of standards and our work re-tested upon completion to ensure quality and results.
-    </li>
-    <li>
-    <a class="name" href="http://www.americansolar.net/">American Solar</a>
-    <address>475 Gate 5 Rd., #119, Sausalito, California 94965 </address>
-    <span class="phone">888-765-2751</span>
-    <span class="email">Info@AmericanSolar.Net</span>
-    <span class="solutions">Solar Electric, Solar Thermal, Energy Audit</span>
-    <span class="serves">Residential and commercial customers</span>
-    American Solar is a full service solar and renewable energy design, installation and consulting company. Our services also include project management and oversight, project financing, independent design, system commissioning, off grid islanding systems, property scale power management systems and Battery Backup systems. American Solar serves the commercial, government and residential markets in California and Hawaii.
-    </li>
-    <li>
-    <a class="name" href="http://renewalbyandersen.com/">Renewal by Andersen</a>
-    <address>30800 Santana Street, Hayward, California 94544 </address>
-    <span class="phone">510-400-7470</span>
-    <span class="email">beth.johnson@andersencorp.com</span>
-    <span class="solutions">Windows and Doors</span>
-    <span class="credentials">Home Performance with Energy Star</span>
-    <span class="serves">Residential and commercial customers</span>
-    Custom window and patio door replacement liision of Andersen Windows.  We handle everything start to finish.  Green Seal Certified.  Energy Star Partner of the Year in 2010.
-    </li>
-    <li>
-    <a class="name" href="http://www.habitatforliving.com/">Habitat For Living</a>
-    <address>po box 370507, Montara, California 94037</address>
-    <span class="phone">650-260-5433</span>
-    <span class="email">timpayne@gmail.com</span>
-    <span class="solutions">Air Sealing and Ventilation, Insulation, Safety, Reflective Roof Systems, Heating and Cooling, Energy Audit, Water Heating, High Efficiency Plumbing Fixtures, Non-Residential High Efficiency Plumbing Fixtures, Landscape Irrigation Systems, Windows and Doors</span>
-    <span class="credentials">Home Performance with Energy Star, BPI Certified Building Analyst Professional</span>
-    <span class="serves">Residential and commercial customers</span>
-    At Habitat for Living we work to improve your building infrastructure—where you live and work—to ensure a healthy, comfortable, and energy-efficient environment. We develop practical solutions to reduce your energy costs and build a green footprint in your community.
-    </li>
-    <li>
-    <a class="name" href="http://www.professorplumbsf.com/">Professor Plumb</a>
-    <address>2091 Folsom St., San Francisco, California 94110 </address>
-    <span class="phone">415-621-4673</span>
-    <span class="email">eve@professorplumbsf.com</span>
-    <span class="solutions">Water Heating, High Efficiency Plumbing Fixtures, Non-Residential High Efficiency Plumbing Fixtures, Solar Thermal</span>
-    <span class="serves">Residential and commercial customers</span>
-    Professor Plumb, a Certified Green Plumber, is dedicated to continued education, staying on the cutting edge of the newest growth in the Plumbing field: energy efficiency, including installation of H.E domestic hot water systems and high efficiency home heat systems, such as in-floor radiant and solar.  We take the responsibility of helping the world’s energy crises seriously by helping our customers find ways to conserve energy and reduce their environmental impact; the world has a problem and we have answers!
-    </li>
-    <li>
-    <a class="name" href="http://www.quantumbuilder.com/">Quantum Builder for Sustainable Living</a>
-    <address>1454 B Fourth Street, Berkeley, California 94710 </address>
-    <span class="phone">510.559.3488 x 152</span>
-    <span class="email">stefan@quantumbuilder.com</span>
-    <span class="solutions">Air Sealing and Ventilation, Water Heating, Energy Audit</span>
-    <span class="credentials">Home Performance with Energy Star</span>
-    <span class="serves">Residential and commercial customers</span>
-    We are a firm that starts with Energy Audits and small and mid size energy retrofits. We go all the way to complete energy remodels and also do new buildings.
-    Buildings are responsible for 40% of national energy consumption and 70% of total electrical consumption.  They emit 50% of CO2 emissions. Changing the way energy is used by buildings has tremendous potential to reduce our national energy crisis.  Q+ buildings reduce energy consumption for heating and cooling by 90%. This can be achieved in almost any climate zone for both new and retrofit projects.
-    </li>
-    <li>
-    <a class="name" href="http://www.calsolarworks.com/">Cal Solar Works</a>
-    <address>2612 Barrington Ct., Hayward, California 94545 </address>
-    <span class="phone">510 754-0514</span>
-    <span class="email">janh@calsolarworks.com</span>
-    <span class="solutions">Solar Electric, Solar Thermal</span>
-    <span class="credentials">Home Performance with Energy Star</span>
-    <span class="serves">Residential and commercial customers</span>
-    We specialize in designing and installing PV Solar and Solar Thermal systems for residential, commercial, non-profit and public sector clients.
-    We use the highest quality components and provide the highest possible quality workmanship.
-    We also install ultra-high efficient lighting systems with intelligent controls (motion sensors, daylight harvesting, scheduling etc.) in high-bay facilities (retail, warehousing, manufacturing, distribution).
-    </li>
-    <li>
-    <a class="name" href="http://www.innovativemech.com/">Innovative Mechanical, Inc.</a>
-    <address>80 Tanforan Avenue, South San Francisco, California 94080 </address>
-    <span class="phone">650-583-8222</span>
-    <span class="email">ssalem@innovativemech.com</span>
-    <span class="solutions">Air Sealing and Ventilation, Heating and Cooling, Water Heating, Insulation</span>
-    <span class="credentials">San Francisco Energy Watch</span>
-    <span class="serves">Residential and commercial customers</span>
-    Innovative Mechanical specializes in design build commercial and residential HVAC.  We provide 24-hour emergency service, annual maintenance agreements, new equipment installation, duct work fabrication and installation, and ventilation systems. In addition to HVAC we have an on site sheet metal shop that allows us to fabricate custom ducting, architectural and general sheet metal
-    </li>
-    <li>
-    <a class="name" href="http://www.solarworksca.com/">Solar Works</a>
-    <address>400 Morris Street, Suite C, Sebastopol, California 95472 </address>
-    <span class="phone">(707) 829-8282</span>
-    <span class="email">kara@solarworksca.com</span>
-    <span class="solutions">Solar Electric</span>
-    <span class="serves">Residential and commercial customers</span>
-    Solar Works is a full-service, licensed solar contractor, providing high quality solar systems for home, business and community. We offer expert in-house design and installation, extraordinary customer service, and the best warranties in the solar industry.
-    </li>
-    <li>
-    <a class="name" href="http://www.solarcraft.com/">SolarCraft Services, Inc</a>
-    <address>285-D Bel Marin Keys Blvd., Sonoma, California 95476 </address>
-    <span class="email">bsmith@solarcraft.com</span>
-    <span class="solutions">Solar Electric, Solar Thermal</span>
-    <span class="serves">Residential and commercial customers</span>
-    Twenty-six year old company focusing on Solar Electric, Hot Water and Pool heating for both residential and commercial use.  Fully licensed (B, C-46, C-10) employing certified design and in-house installation crews.
-    </li>
-    <li>
-    <a class="name" href="http://www.jimgardnerconstruction.com/">Jim Gardner Construction</a>
-    <address>3871 Piedmont Ave., Suite 13, Oakland, California 94611 </address>
-    <span class="phone">510-867-9220</span>
-    <span class="email">gardcon@sbcglobal.net</span>
-    <span class="solutions">Air Sealing and Ventilation, Insulation, Safety, Energy Audit, Heating and Cooling, Water Heating, High Efficiency Plumbing Fixtures, Solar Electric, Solar Thermal, Electrical and Lighting, Windows and Doors</span>
-    <span class="credentials">Home Performance with Energy Star</span>
-    <span class="serves">Residential customers</span>
-    We are a full-service Building Performance, Design-Build Remodeling and Structural Repair Company with over 30 years experience improving Bay Area homes.  We can help you improve the energy efficiency, health and safety, and comfort of your home and also address any remodeling or repair concerns that you may have at the same time. Our advanced Energy Audit and Building Performance Analysis includes a Structural Repair and Remodeling Needs Assesment from a staff member trained as a Certified Graduate Remodelor (NAHB) and a Certified Structural Repair Specialist (NAWSRC). If you are looking for a Contractor who can integrate all of your home improvement needs into a single package, please give us a call.
-    </li>
-    <li>
-    <a class="name" href="http://www.c2egreen.com/">c2e LLC</a>
-    <address>384 Bel Marin Keys, Novato, California 94949 </address>
-    <span class="phone">415-707-0303</span>
-    <span class="email">s.schramm@c2egreen.com</span>
-    <span class="solutions">Energy Audit</span>
-    <span class="credentials">BPI Certified Building Analyst Professional</span>
-    <span class="serves">Commercial customers</span>
-    C2E offers a wide range of environmental-consious energy solutions related to new and existing structures; carbon footprint audits, energy efficiency consluting, renewables.
-    </li>
-    <li>
-    <a class="name" href="http://www.energybeyonddesign.com/">Energy Beyond Design Inc.</a>
-    <address>4121 26th St., San Francisco, California 94131 </address>
-    <span class="phone">(415)-508-8161</span>
-    <span class="email">info@energybeyonddesign.com</span>
-    <span class="solutions">Air Sealing and Ventilation, Insulation, Safety, Energy Audit, Heating and Cooling, Water Heating, Solar Electric</span>
-    <span class="credentials">Home Performance with Energy Star, BPI Certified Building Analyst Professional</span>
-    <span class="serves">Residential and commercial customers</span>
-    Offering affordable energy audits and retrofits, Energy Beyond Design reduces your utility bills and environmental footprint while improving your home comfort and indoor air quality.
-    </li>
-    <li>
-    <a class="name" href="http://www.pholliesrussmurphy.com/">PholliesRussMurphy, Inc.</a>
-    <address>872 Elizabeth St, San Francisco, California 94114 </address>
-    <span class="phone">415-726-3063</span>
-    <span class="email">phollies@comcast.net</span>
-    <span class="solutions">Solar Electric, Water Heating, Air Sealing and Ventilation, Windows and Doors</span>
-    <span class="serves">Residential customers</span>
-    My company, PholliesRussMurphy, Inc, is a rather new company.  I used to own Phollies, a CA corporation, for over 20 years.  I have been doing remodel work over 20 years in San Francisco.  I have now stated PRM,Inc, and Solar Technologies Solutions Group.  I have completed a
-    the PG&amp;E  Solar Thermal Water class with Robert Cooley and Nick Stimmell at DVCollege.  I am poised to represent the market place with many new technologies and finance programs.
-    </li>
-    <li>
-    <a class="name" href="http://www.savewaterplumbing.com/">Voelker Plumbing</a>
-    <address>99 Arleta Ave., San Francisco, California 94134 </address>
-    <span class="phone">(415) 307-1917</span>
-    <span class="email">voelkerplumbing@yahoo.com</span>
-    <span class="solutions">Water Heating, High Efficiency Plumbing Fixtures, Non-Residential High Efficiency Plumbing Fixtures</span>
-    <span class="credentials">San Francisco Energy Watch</span>
-    <span class="serves">Residential and commercial customers</span>
-    Voelker Plumbing is a full service plumbing company specializing in commercial and restaurant  installation and remodels in the San Francisco Bay area. For over 20 years, we have been dedicated to providing all of our customers with skilled,professional plumbing services.
-    Please visit our website at: www.savewaterplumbing
-    </li>
-    <li>
-    <a class="name" href="http://www.maggetticonstruction.com/">Maggetti Construction</a>
-    <address>1770 Hamilton Avenue, San Jose, California 95125 </address>
-    <span class="phone">408-600-8791</span>
-    <span class="email">Rich@FreedomSolar.net</span>
-    <span class="solutions">Solar Electric</span>
-    <span class="serves">Residential and commercial customers</span>
-    The Freedom Solar liision of Maggetti Construction designs and builds solar PV systems for homes and small businesses.  Maggetti Construction has served the Bay Area for 25 years.  We are an authorized SunPower dealer.
-    </li>
-    <li>
-    <span class="name">Twin Rivers Green Construction</span>
-    <address>38 Miller Ave. Suite # 482, Mill Valley, California 94941 </address>
-    <span class="phone">916.753.9715</span>
-    <span class="email">multitrade@wildblue.net</span>
-    <span class="solutions">Air Sealing and Ventilation, Insulation, Safety, Reflective Roof Systems, Heating and Cooling, Energy Audit, Water Heating, Geothermal, High Efficiency Plumbing Fixtures, Non-Residential High Efficiency Plumbing Fixtures, Solar Electric, Solar Thermal, Landscape Irrigation Systems, Windows and Doors</span>
-    <span class="credentials">Home Performance with Energy Star, BPI Certified Envelope Professional</span>
-    <span class="serves">Residential and commercial customers</span>
-    Twin Rivers Green Construction (TRGC) provides energy efficiency services and retrofit proposals to consumers. The TRGC team is BPI certified for residential, commercial and multi-family building audits and has extensive building contracting and plumbing contracting experience which complements their 35 years of retrofit building experience.
-    The retrofit team has earned the Energy Efficient award from Flex Your Power. We will conduct a whole house energy audit with a full report on our findings and a cost estimate to complete the necessary and appropriate energy upgrade repairs.
-    We are BPI trainers under CBPCA and CACTUS, LEED AP, NABCEP, HERS raters, and Green Point Raters. We are licensed, insured, and bonded and can provide the full array of services necessary for building owners to participate in the San Francisco Green Finance program.
-    </li>
-    <li>
-    <a class="name" href="http://www.emcosystems.net/">EMCo Systems Solutions, Inc.</a>
-    <address>607 Crane Avenue, San Mateo, California 94404 </address>
-    <span class="phone">650-525-1632</span>
-    <span class="email">design@emcosystems.net</span>
-    <span class="solutions">Air Sealing and Ventilation, Reflective Roof Systems, Heating and Cooling, Energy Audit, Solar Electric, Solar Thermal</span>
-    <span class="serves">Commercial customers</span>
-    EMCo Systems Solutions, Inc. is a highly specialized GREEN project consulting and management company which delivers custom energy management systems, designs, concepts and solutions for and with general contractors, property owners and end users to conserve water, energy and lower operating costs.
-    </li>
-    <li>
-    <a class="name" href="http://www.schmittheating.com/">Schmitt Heating Company</a>
-    <address>34 Woodward Street, San Francisco, California 94103 </address>
-    <span class="phone">415-522-0966</span>
-    <span class="email">Caroline@schmittheating.com</span>
-    <span class="solutions">Heating and Cooling</span>
-    <span class="serves">Residential and commercial customers</span>
-    Schmitt Heating and Air Conditioning Company has been installing furnaces and air conditioning in San Francisco for over 100 years.
-    </li>
-    <li>
-    <a class="name" href="http://www.oxypower.com/">Occidental Power</a>
-    <address>3629 Taraval Street, San Francisco, California 94116 </address>
-    <span class="phone">415-681-8861</span>
-    <span class="email">greg@oxypower.com</span>
-    <span class="solutions">Solar Electric, Solar Thermal</span>
-    <span class="serves">Residential and commercial customers</span>
-    Occidental Power, Solar, Wind &amp; Cogeneration (CSLB #591549 / B license and C-46) is the oldest and most experienced solar design and build firm in San Francisco. We lead the way in solar heating and solar energy in the city. Every job we do is designed by our professional staff and often meets or exceeds government and industrial codes.
-    We uphold good business practices including:
-    - Our philosophy to provide high quality solar energy systems
-    - Our commitment to environmental and social responsibility
-    - Employing local talent (e.g. Urban League, Bayview-Hunters Point alternative energy programs, California Conservation Corps, and Environmental    Degree Programs of California state universities)
-    </li>
-    <li>
-    <a class="name" href="http://www.signaturesolardesign.com/">Signature Solar Design</a>
-    <address>16495 Vineyard Blvd., Morgan Hill, California 95037 </address>
-    <span class="phone">4087829944</span>
-    <span class="email">ssdsolar@yahoo.com</span>
-    <span class="solutions">Insulation, Reflective Roof Systems, Energy Audit, Solar Electric, Solar Thermal, Air Sealing and Ventilation, Electrical and Lighting</span>
-    <span class="serves">Residential and commercial customers</span>
-    Signature Solar Design offers innovative solutions and custom applications for renewable energy needs. SSD specializes in Built In Photovoltaic (BiPV) and architectural PV that allow solar technologies to be integrated into building structure such as roofs, skylights, walls, and more.
-    </li>
-    <li>
-    <a class="name" href="http://nsplumb.com/">North and South Plumbing</a>
-    <address>625, San Francisco, California 94117 </address>
-    <span class="phone">415 573 5025</span>
-    <span class="email">frankiekeenan1@aol.com</span>
-    <span class="solutions">Water Heating, High Efficiency Plumbing Fixtures, Non-Residential High Efficiency Plumbing Fixtures, Insulation, Solar Thermal</span>
-    <span class="serves">Residential and commercial customers</span>
-    We have over 30 years experience in the Plumbing industry, 15 in  Europe and 15 in the Bay Area. We cover all aspects of the industry from residential, commercial and hydronic/solar fields.
-    We are a customer driven organization that work with you to make your projects run as smooth as possible. We are convinced you will actually enjoy working with North and South Plumbing.
-    </li>
-    <li>
-    <a class="name" href="http://www.stuckertheat.com/">Stuckert Heating &amp; Sheet Metal, Inc.</a>
-    <address>7144 Mission Street, Daly City, California 94014 </address>
-    <span class="phone">6507551881</span>
-    <span class="email">stuckertheating@comcast.net</span>
-    <span class="solutions">Heating and Cooling</span>
-    <span class="serves">Residential and commercial customers</span>
-    Stuckert Heating &amp; Sheet Metal has a tradition of meeting customer needs. From the most complex installation to routine service and maintenance, Stuckert Heating &amp; Sheet Metal has the tools, the people, and the products to provide a system to fit your needs.  Additionally,  we are a family owned and operated company that has been serving San Francisco, Daly City &amp; Bay Area since 1963.
-    </li>
-    <li>
-    <a class="name" href="http://covenanteandassociates.com/">Covenent &amp; Associates Inc.</a>
-    <address>770 L Street   ste. 950, Sacramento, California 95814 </address>
-    <span class="phone">510-827-6924</span>
-    <span class="email">covenergy@yahoo.com</span>
-    <span class="solutions">Energy Audit</span>
-    <span class="credentials">BPI Certified Building Analyst Professional</span>
-    <span class="serves">Residential and commercial customers</span>
-    Covenant &amp; Associates Inc., specializes in Residential and small commercial Energy Audits, and retrofits. Our Auditors are BPI certified, along with our General Contractor.
-    We are Home Performance Contractors, with emphasis on the Building as a System concept. We us up to date equipment, such as minneapolis Blower Door and Duct Blaster Systems, along with Infrared Imaging, which gives us a more precise diagnosis.
-    </li>
-    <li>
-    <a class="name" href="http://www.albionpower.com/">Albion Power Company</a>
-    <address>871 Oak Street, San Francisco, California 94117 </address>
-    <span class="phone">415-334-2011</span>
-    <span class="email">cadams@albionpower.com</span>
-    <span class="solutions">Solar Electric, Solar Thermal, Energy Audit</span>
-    <span class="serves">Residential and commercial customers</span>
-    Albion Power Company's professional focus is to provide "best trade practices" for the construction of solar electric, solar hot water, and energy efficiency installations.  From commercial projects at Beringer Winery to custom residential installations in Bernal Heights, our staff provides the highest quality regardless of system size so as to expand a 21st Century economy.  We are a local business headquartered in San Francisco.
-    </li>
-    <li>
-    <a class="name" href="http://www.luminalt.com/">Luminalt Energy Corporation</a>
-    <address>1320 Potrero Avenue, San Francisco, California 94110 </address>
-    <span class="phone">(415) 641-4000</span>
-    <span class="email">admin@luminalt.com</span>
-    <span class="solutions">Energy Audit, Water Heating, Solar Electric, Solar Thermal, Heating and Cooling</span>
-    <span class="credentials">San Francisco Energy Watch</span>
-    <span class="serves">Residential and commercial customers</span>
-    Luminalt designs, installs, and maintains premium solar electric and hot water systems in the San Francisco Bay Area.
-    </li>
-    <li>
-    <a class="name" href="http://www.abrightideaelectrical.com/">A Bright Idea Electrical</a>
-    <address>542 4th Avenue, San Francisco, California 94118 </address>
-    <span class="email">GreenSF@abrightideaelectrical.com</span>
-    <span class="solutions">Solar Electric, Energy Audit</span>
-    <span class="serves">Residential and commercial customers</span>
-    </li>
-    <li>
-    <a class="name" href="http://www.buildingefficiency.net/">Building Efficiency</a>
-    <address>2611 47th ave, San Francisco, California 94116 </address>
-    <span class="phone">866.945.0278</span>
-    <span class="email">david@buildingefficiency.net</span>
-    <span class="solutions">Air Sealing and Ventilation, Insulation, Safety, Reflective Roof Systems, Energy Audit, Heating and Cooling, Water Heating, High Efficiency Plumbing Fixtures, Solar Electric, Solar Thermal, Landscape Irrigation Systems, Windows and Doors</span>
-    <span class="credentials">San Francisco Energy Watch, Home Performance with Energy Star, BPI Certified Building Analyst Professional</span>
-    <span class="serves">Residential and commercial customers</span>
-    We are a one-stop shop for building performance contracting to eliminate wasted energy, ensure peak performance of heating, ventilation and cooling systems, and maximize renewable energy production.  Our Home Energy Audit/Whole Building Performance Test involves a thorough investigation of the entire building instead of focusing on a single component.  Whole building performance provides integrated design to maximize energy savings, comfort, and environmental care.
-    </li>
-    <li>
-    <a class="name" href="http://www.solarcity.com/">SolarCity</a>
-    <address>393 Vintage Park Dr, San Mateo, California 94404 </address>
-    <span class="phone">650-638-1028</span>
-    <span class="email">info@solarcity.com</span>
-    <span class="solutions">Air Sealing and Ventilation, Insulation, Reflective Roof Systems, Energy Audit, Water Heating, Solar Electric, Safety, Heating and Cooling, Solar Thermal</span>
-    <span class="credentials">Home Performance with Energy Star, BPI Certified Building Analyst Professional</span>
-    <span class="serves">Residential and commercial customers</span>
-    SolarCity is the nation's leading full-service solar provider for homeowners, businesses and government organizations—the first company to provide solar energy system design, financing, installation and monitoring services from a single source.  SolarCity has provided solar energy systems to hundreds of San Francisco homeowners and businesses including Grace Cathedral.  In addition to its award winning solar services, SolarCity now offers comprehensive home performance, energy efficiency, audit and upgrade services that can be financed through the GreenFinanceSF PACE loan program.
-    </li>
-    <li>
-    <a class="name" href="http://www.belenussolar.com/">Belenus Solar</a>
-    <address>729 Andover St, San Francisco, California 94110 </address>
-    <span class="phone">415 244 6383</span>
-    <span class="email">david@belenussolar.com</span>
-    <span class="solutions">Solar Electric</span>
-    <span class="serves">Residential and commercial customers</span>
-    At Belenus we wish to change your life- and the lives of many others - by assisting you in increasing your energy effiency while dramatically reducing your electrical costs. We will help you become environmentally friendly by providing you with world-leading solar solutions.
-    </li>
-    <li>
-    <a class="name" href="http://www.saveenergyco.com/">Save energy company</a>
-    <address>315 petaluma blvd. s., Petaluma, California 94952 </address>
-    <span class="phone">415 824-6010 x 202</span>
-    <span class="email">jgorman@saveenergyco.com</span>
-    <span class="solutions">Energy Audit, High Efficiency Plumbing Fixtures, Air Sealing and Ventilation, Windows and Doors</span>
-    <span class="credentials">BPI Certified Building Analyst Professional, BPI Certified Envelope Professional</span>
-    <span class="serves">Residential customers</span>
-    Celebrating it's 28th, Save Energy Company is an award winning retrofit contractor.  Although we are now located in Petaluma after 20 years in the Mission, we still service San Francisco every day.  Primarily a window and door replacment contractor as of this writing, we are pursuing a more Building Analysis direction and are BPI  and HERS certified.  We were an active insulation contractor for many years and had worked on a duct sealing program with PG&amp;E for three years, so our fundamental understanding of HVAC systems, duct sealing and building envelope sealing is extensive.
-    </li>
-    <li>
-    <a class="name" href="http://www.pellareplacement.com/">Pella Window and Doors</a>
-    <address>1717 4th Street, Ste B., Berkeley, California 94710 </address>
-    <span class="phone">510-292-2900</span>
-    <span class="email">crispenlc@pella.com</span>
-    <span class="solutions">Windows and Doors</span>
-    <span class="credentials">Home Performance with Energy Star</span>
-    <span class="serves">Residential customers</span>
-    Pella builds beautiful, energy- efficient windows and doors with meaningful details that matter every day. From selecting your new windows and doors, through the day we install them in your home, Pella’s skilled professionals will help make replacing your old windows and doors a highly satisfying experience.
-    </li>
-    <li>
-    <a class="name" href="http://www.practicalgreenbuilders.com/">Avalon Builders, Inc.</a>
-    <address>23900 Farm Road, Sonoma, California 95476 </address>
-    <span class="phone">707.939.9221</span>
-    <span class="email">michael@practicalgreenbuilders.com</span>
-    <span class="solutions">Air Sealing and Ventilation, Safety, Energy Audit, Heating and Cooling, Solar Electric, Solar Thermal</span>
-    <span class="credentials">Home Performance with Energy Star</span>
-    <span class="serves">Residential and commercial customers</span>
-    Building and remodeling sustainably in Northern California for over 20 years.  First General Contractor in Marin County to be declared a Green Business.  Member of the California Building Performance Contractors Association.  Dedicated to improving homes by combining energy efficiency, comfort, safety, aesthetics, and structural integrity.
-    </li>
-    <li>
-    <a class="name" href="http://renewableswest.com/">Renewables West</a>
-    <address>2756 Alvarado Street, Unit W-A, San Leandro, California 94577 </address>
-    <span class="phone">510-895-0774</span>
-    <span class="email">david@renewableswest.com</span>
-    <span class="solutions">Solar Electric</span>
-    <span class="serves">Residential and commercial customers</span>
-    Renewables West provides service in solar, wind and renewable technologies.  Established in January ‘09, we specialize in mobile, portable and hybrid solar power generators, stand-alone solar LED lighting systems and related product lines.  We also offer competitive pricing on solar PV modules and inverters for residential and commercial installations.
-    We invite you to visit our website to find out more about our product lines, especially the SolaRover Mobile Generator, which is announcing new, lower pricing and many new features such as variable-tilt array, advanced-lead-acid batteries, and an optional all-aluminum frame.  For shipping worldwide, this system fits in a standard 20-foot container.
-    </li>
-    <li>
-    <a class="name" href="http://www.creativeenergy.com/">Creative Energy Corporation</a>
-    <address>3419 Regatta Blvd, Richmond, California 94804 </address>
-    <span class="phone">5102372300</span>
-    <span class="email">kyleg@creativeenergy.com</span>
-    <span class="solutions">Solar Electric</span>
-    <span class="serves">Residential customers</span>
-    Creative Energy is an authorized Sunpower Dealer/Installer of Photvoltaic (PV) Solar Electric in the greater bay area.
-    </li>
-    <li>
-    <a class="name" href="http://www.sunfirstsolar.com/">Sun First!</a>
-    <address>3060 Kerner Blvd. Ste W, San Rafael, California 94901 </address>
-    <span class="phone">4154585870</span>
-    <span class="email">chet@sunfirstsolar.com</span>
-    <span class="solutions">Solar Electric, Solar Thermal</span>
-    <span class="serves">Residential and commercial customers</span>
-    Sun First! Solar has been in the solar business since 1984. Our mission is to protect the beauty of our environment and to prevent the depletion of natural resources through the use of renewable energy.  Sun First! will handle the entire job from design to installation, including obtaining the necessary permits, financing and approvals.
-    </li>
-    <li>
-    <a class="name" href="http://www.rps-solar.com/">Renewable Power Solutions Inc.</a>
-    <address>2029 O'Toole Ave, San Jose, California 95131 </address>
-    <span class="phone">408-998-7400</span>
-    <span class="email">info@rps-Solar.com</span>
-    <span class="solutions">Solar Electric, Solar Thermal</span>
-    <span class="credentials">San Francisco Energy Watch</span>
-    <span class="serves">Residential and commercial customers</span>
-    Company Background
-    Renewable Power Solutions Inc. (Power Solutions) was established in 1998 to provide renewable energy solutions such as solar electric, wind, and micro hydro power systems to help you become independent of the grid. We are a customer service oriented company with 100% customer satisfaction since 1998. Renewable Power Solutions Inc. is a Diamond Certified company.
-    Experience
-    We have 11 years of experience in the alternative energy industry, using current technologies and state of the art techniques to ensure the best possible solar electric system to meet the needs of our customers. We are a local company in San Jose, California, providing service for the state of California. You can rest assured that Renewable Power Solutions Inc. will be in business to service your warranty.
-    Our Commitment to You
-    Renewable Power Solutions Inc.'s commitment to the public is to design and install the solar electric system that best suits your family or business needs. By using our 11 + years of experience in the alternative energy industry, current technologies, and state of the art techniques, we will ensure the best possible solar electric system for you. As a Diamond Certified company, we can only offer you 100% customer satisfaction
-    Leadership
-    Renewable Power Solutions Inc. is the first solar integrator in California to have an approved state apprenticeship program. This program sets the standard in the industry that eventually all solar integrators will follow. Having a qualified installer is a must.
-    Our Principals
-    Integrity, Leadership, and High Standards are only part of our principals. We only represent manufacturers that are proven to have excellent customer service, the most reliable products, and the least environmental impact during manufacturing. Our 100% customer satisfaction rating is our most important certification. We will not sacrifice it by representing manufacturers that do not share our high standards for sustainability and customer satisfaction.
-    Our Solution
-    We would like for everyone to be energy independent and that includes you. Our solution will be presented to you in simple fashion; our engineering team is not allowed to do proposals. We warranty the simplicity of our proposal to make sense environmentally and economically. Your nextdoor neighbors' solutions is not necessary the right solution for you. We provide you with one-on-one attention from the initial visit to the last one.
-    We are a Dimond Certified company for the last 4 years
-    </li>
-    <li>
-    <a class="name" href="http://www.sungevity.com/">Sungevity</a>
-    <address>66 Franklin, Suite 310, Oakland, California 94607 </address>
-    <span class="phone">510.496.5500</span>
-    <span class="email">sungevity@gmail.com</span>
-    <span class="solutions">Solar Electric</span>
-    <span class="serves">Residential customers</span>
-    Sungevity specializes in the design, financing, installation, and maintenance of home solar systems. We currently offer a 0 down, 10 year Solar Lease.
-    </li>
-    <li>
-    <a class="name" href="http://www.sunwatersolar.com/">SunWater Solar</a>
-    <address>865 Marina Bay Parkway Suite 39, Richmond, California 94804 </address>
-    <span class="phone">SunWater Solar</span>
-    <span class="email">info@sunwatersolar.com</span>
-    <span class="solutions">Solar Thermal</span>
-    <span class="serves">Residential and commercial customers</span>
-    SunWater Solar designs, installs and services solar thermal systems that lower utility bills, reduce greenhouse gas emissions and help clients meet sustainability requirements. From system design to project management, SunWater Solar has implemented solar thermal technology for a variety of applications, including domestic hot water heating, process heating and pool heating. Founded in 2007 and based in Richmond, California, SunWater Solar serves a wide variety of customers and focuses exclusively on solar thermal technology.
-    </li>
-    <li>
-    <a class="name" href="http://www.energywiseamerica.com/">Energy Wise America, Inc.</a>
-    <address>4340 Redwood Hwy, Suite 50, San Rafael, California 94903 </address>
-    <span class="phone">415.305.3899</span>
-    <span class="email">toddmeyer@ewamerica.com</span>
-    <span class="solutions">Heating and Cooling</span>
-    <span class="credentials">San Francisco Energy Watch</span>
-    <span class="serves">Commercial customers</span>
-    Energy Wise America is the recognized leader in providing energy efficiency
-    solutions for small and medium-sized businesses. We work with local and
-    state utility rebate programs to insure our customers the fastest and
-    highest return on their investment possible. Energy Wise America is
-    dedicated to providing exceptional customer service. We are constantly
-    looking for ways to assist our customers lower energy usage and reduce
-    costs.
-    At Energy Wise America we specialize in saving our customers money by
-    providing state-of-the-art products and services that will save energy
-    consumption and significantly lower energy costs.
-    </li>
-    <li>
-    <a class="name" href="http://www.aoenergy.net/">AO Energy and Design</a>
-    <address>708 Ada Street, San Mateo, California 94401 </address>
-    <span class="phone">650-826-0725</span>
-    <span class="email">aoenergy@gmail.com</span>
-    <span class="solutions">Air Sealing and Ventilation, Energy Audit</span>
-    <span class="serves">Residential customers</span>
-    HERS Rater Diagnostic testing and Verification)
-    Energy Audits
-    Title 24 Compliance Reports
-    Energy Efficiency Consultation
-    Duct testing and Blower Door Testing
-    </li>
-    <li>
-    <a class="name" href="http://www.sunlightandpower.com/">Sun Light &amp; Power</a>
-    <address>1035 Folger Ave., Berkeley, California 94710 </address>
-    <span class="phone">(510) 845-2997</span>
-    <span class="email">eric@sunlightandpower.com</span>
-    <span class="solutions">Solar Electric, Solar Thermal</span>
-    <span class="serves">Residential and commercial customers</span>
-    Sun Light &amp; Power is a leading solar integrator.  Since 1976 we have created innovative solar solutions for businesses and homes that help preserve and protect the planet’s vital resources.
-    We offer customers smart, cost-effective energy packages that combine photovoltaic solar electricity (PV) and solar water heating (SWH) along with energy efficiency and conservation.
-    We work with a full range of businesses and residential customers as well as non-profits, architects, general contractors, utilities and municipalities . Whether you are planning affordable housing, a carport or corporate headquarters, our staff will deliver end-to-end oversight of our solar project, ensuring its completion on time and on budget.
-    </li>
-    <li>
-    <span class="name">FOSCO</span>
-    <address>763- 8Th Avenue, Suite-A, San Francisco, California 94118 </address>
-    <span class="phone">415-3871756</span>
-    <span class="email">kilbree@gmail.com</span>
-    <span class="solutions">Air Sealing and Ventilation, Safety, Heating and Cooling, Insulation, Water Heating, High Efficiency Plumbing Fixtures, Solar Electric, Solar Thermal, Windows and Doors</span>
-    <span class="credentials">San Francisco Energy Watch</span>
-    <span class="serves">Residential customers</span>
-    FOSCO, Contractors &amp; Environmental Consultants is a San Francisco based company recognized for its excellent client service, reliability and effectiveness in environmental consulting and regulatory compliance.
-    We provide home owners and businesses with testing and hazard evaluation, training, help with project/building design and management services related to energy use, envelope tightening etc. and environmental site assessments.
-    </li>
-    <li>
-    <a class="name" href="http://www.bayenergy.com/">Bay Area Energy Solutions</a>
-    <address>1326 Marsten Road, Burlingame, California 94010 </address>
-    <span class="phone">650-375-5955</span>
-    <span class="email">rhymes@bayenergy.com</span>
-    <span class="solutions">Solar Electric</span>
-    <span class="credentials">San Francisco Energy Watch</span>
-    <span class="serves">Residential and commercial customers</span>
-    We are a full sevice Solar Photovoltaic and Thermal Installation Company. We specialize in custom projects for detail oriented clients that incorporate a more comprehensive look at total home energy performance. We are partnered with a premier bay area roofing company, which serves as a perfect compliment to our solar installation team. This partnership allows us to offer a more seamless integration process, virtually eliminating the often problematic aspect of waterproofing penetrations. With expert roofing and adept solar installation, our customers have come to expect and receive the utmost in quality and service.
-    </li>
-    <li>
-    <a class="name" href="http://hersolar.com/">HER Solar~ Home Energy Ratings &amp; Solar</a>
-    <address>565 English Ave.  #4, Monterey, California 93940 </address>
-    <span class="phone">831-920-1926</span>
-    <span class="email">jennifer@hersolar.com</span>
-    <span class="solutions">Energy Audit</span>
-    <span class="credentials">Home Performance with Energy Star</span>
-    <span class="serves">Residential and commercial customers</span>
-    HERS Ratings:  Perform Home Energy Ratings/Audits for Energy Efficiency upgrades, PACE, Energy Efficient Mortgages
-    HERS testing for NSHP, Energy Star homes, Green Point Rated, LEED
-    Green Point Ratings:   New/Existing Single or Multi-family homes
-    Title 24 Energy Compliance  documentation:  New/Existing construction-Residential or NonResidential.
-    Consulting:  LEED for Homes, Passive House, Solar, Green
-    Real Estate Broker Services
-    </li>
-    <li>
-    <a class="name" href="http://www.advancedhomeenergy.com/">Advanced Home Energy</a>
-    <address>4907 Central Ave, Richmond, California 94804 </address>
-    <span class="phone">(510)540-4860</span>
-    <span class="email">dvir@advancedhomeenergy.com</span>
-    <span class="solutions">Air Sealing and Ventilation, Insulation, Safety, Energy Audit, Heating and Cooling, Solar Electric, Solar Thermal, Windows and Doors</span>
-    <span class="credentials">BPI Certified Building Analyst Professional</span>
-    <span class="serves">Residential and commercial customers</span>
-    Energy Efficient Home Solutions
-    Advanced Home Energy (AHE) is the leading Home Performance contractor in the San Francisco East Bay. AHE provides expert guidance and services to home owners who want an energy efficient home and want to reduce their personal environmental impact.
-    Home Performance
-    Home performance is an energy efficiency strategy in which contractors address homes as whole systems, rather than in discrete components. Home performance contractors integrate expertise in all areas affecting home energy use; insulation, windows, heating and cooling, water heating, etc.. By integrating treatment of all factors in a home’s energy use, AHE services are solution-oriented, cost-effective, and easier for consumers to use than traditional efficiency methods.
-    Home Energy Audit
-    We provide a home energy audit to diagnose all the components of of a building. We then identify the areas for greatest potential and create a work package that is tailored to the unique issues of the home. By using our services home owners reduce their monthly utility bills, reduce their carbon footprint, and make their home more comfortable throughout the year.
-    </li>
-    <li>
-    <a class="name" href="http://www.californiasolarsystem.com/">California Solar Systems</a>
-    <address>1000 Foster City Blvd. #1204, San Mateo, California 94404 </address>
-    <span class="phone">(800) 324-1978</span>
-    <span class="email">admin@casolarsys.com</span>
-    <span class="solutions">Solar Electric</span>
-    <span class="serves">Residential and commercial customers</span>
-    California Solar Systems, Inc.specializes in residential and commercial solar electric systems. A SunPower Premium Dealer, we combine technical expertise, project management experience, exceptional customer service and state of the art engineering to give our customers a fully integrated solar package at a fair and competitive price. With our simple, sleek design your system will be highly efficient and will last for decades.
-    </li>
-    <li>
-    <a class="name" href="http://www.advantageenergyaudits.com/">Advantage Energy Audits</a>
-    <address>64 Lyford Dr, Belvedere Tiburon, California 94920 </address>
-    <span class="phone">415-699-6300</span>
-    <span class="email">ftulp@advantageenergyaudits.com</span>
-    <span class="solutions">Insulation, Energy Audit</span>
-    <span class="credentials">BPI Certified Building Analyst Professional</span>
-    <span class="serves">Residential customers</span>
-    Independent third party Energy Auditor.
-    </li>
-    <li>
-    <a class="name" href="http://www.separtners.com/">Sustainable Energy Partners</a>
-    <address>2588 Mission St, San Francisco, California 94110 </address>
-    <span class="phone">415-648-1299</span>
-    <span class="email">ben@separtners.com</span>
-    <span class="solutions">Energy Audit</span>
-    <span class="credentials">Home Performance with Energy Star</span>
-    <span class="serves">Residential and commercial customers</span>
-    Sustainable Energy Partners (SEP) is a nationally recognized clean energy consulting firm. SEP is uniquely qualified to provide design and consulting services for the commercial and multi-family residential sectors.
-    SEP can provide three levels of detail for an energy audit:
-    Walk-through Assessment: Analyze energy bills and a brief visual survey of the facility. Identifies no-cost and low-cost opportunities.
-    Energy Survey and Analysis: A more detailed analysis is conducted, including a breakdown of how energy is used within the building. Potential capital-intensive opportunities are identified in the final report for further research and analysis. This is the typical level of audit.
-    Detailed Analysis of Capital-Intensive Modifications (Investment-grade Audit): This analysis focuses on capital-intensive opportunities and provides a higher degree of monitoring, data collection, and engineering analysis. The report includes detailed cost and savings information with a high-level of confidence sufficient for major capital investment decisions, and may include a reasonable timeline for implementation of each recommendation.
-    </li>
-    <li>
-    <a class="name" href="http://www.realgoodssolar.com/">Real Goods Solar</a>
-    <address>27 Simms Street, San Rafael, California 94901 </address>
-    <span class="phone">415-342-1017</span>
-    <span class="email">solar@realgoods.com</span>
-    <span class="solutions">Solar Electric</span>
-    <span class="serves">Residential and commercial customers</span>
-    Real Goods Solar is a leading solar energy integrator, having installed over 5,500 solar electric systems for both residential and commercial properties. Real Goods Solar offers turnkey solar energy solutions, and has 32 years of experience in solar energy, beginning with its sale of the first solar photovoltaic panels in the United States in 1978. With offices in San Rafael, Richmond, Campbell, Fresno, Santa Cruz, Murrieta, and Hopland, California, as well as in Boulder, Colorado, Real Goods Solar is one of the largest residential solar installers in the United States.
-    </li>
-    <li>
-    <span class="name">Flying Colors</span>
-    <address>15 AMBER DR, San Francisco, California 94131 </address>
-    <span class="phone">415-564-4500</span>
-    <span class="email">cbpca@flyingcolors.com</span>
-    <span class="solutions">Air Sealing and Ventilation, Safety, Energy Audit, Heating and Cooling, Water Heating, Insulation, Windows and Doors</span>
-    <span class="credentials">BPI Certified Building Analyst Professional</span>
-    <span class="serves">Residential and commercial customers</span>
-    Our company is commited to the concept of the building as a system.  We will work with our clients to develop a project that will deliver measurable results in energy efficiency, safety, and comfort
-    </li>
-    <li>
-    <a class="name" href="http://www.emersonenvironmental.com/">Emerson Environmental</a>
-    <address>160 Plymouth Ave, San Carlos, California 94070 </address>
-    <span class="phone">(650) 281-9805</span>
-    <span class="email">info@emersonenvironmental.com</span>
-    <span class="solutions">Air Sealing and Ventilation, Safety, Energy Audit</span>
-    <span class="credentials">BPI Certified Building Analyst Professional, BPI Certified Envelope Professional</span>
-    <span class="serves">Residential customers</span>
-    Schedule Your Home Energy Audit -- Our experienced, BPI-certified energy auditor will test your home and prepare a detailed list of energy efficiency modifications recommended for your specific home, lifestyle, and needs.  Our energy audit includes combustion safety testing, blower door test, and appliance and insulation evaluations.  Our goal is to provide you with objective information to serve as the basis for smart decision-making -- we are not there to sell you additional services.
-    </li>
-    <li>
-    <a class="name" href="http://homerci.com/">Home Remodelers Contracting, Inc.</a>
-    <address>6694 Amador Plaza Road, Dublin, California 94568 </address>
-    <span class="phone">925-551-7250</span>
-    <span class="email">dale.hrci@gmail.com</span>
-    <span class="solutions">Air Sealing and Ventilation, Insulation, High Efficiency Plumbing Fixtures, Solar Electric, Windows and Doors</span>
-    <span class="credentials">Home Performance with Energy Star</span>
-    <span class="serves">Residential and commercial customers</span>
-    liscense general contractor specializing in Window and door replacements, hole house remodeling, additions including all HVAC, electrical, plumbing and insulation. We also design,sell and install solar for residential, multi housing and light commercial.
-    </li>
-    <li>
-    <a class="name" href="http://www.cleansolar.com/">Clean Solar</a>
-    <address>302F Toyon Ave.  #249, San Jose, California 95127 </address>
-    <span class="phone">408-590-7350</span>
-    <span class="email">info@cleansolar.com</span>
-    <span class="solutions">Solar Electric</span>
-    <span class="serves">Residential and commercial customers</span>
-    “The fastest growing solar installation company in Northern California. Clean Solar offers the longest warranties and production guarantees in the industry. Clean Solar is the only solar installation company that teaches installation classes at a public school. We are top 10 rated by the Prime Buyer’s report. And Clean Solar offers the best no money down financing packages including the brand new PACE and California First Programs. Clean Solar will exceed all your expectations.”
-    </li>
-    <li>
-    <a class="name" href="http://www.theenerguy.com/">The Energuy</a>
-    <address>585 9th St., Ste #313, Oakland, California 94607 </address>
-    <span class="phone">1-877-600-0123</span>
-    <span class="email">info@theenerguy.com</span>
-    <span class="solutions">Energy Audit</span>
-    <span class="serves">Residential customers</span>
-    The Energuy is a team of Energy Raters that provide independent third party ratings and verification for homeowners and contractors.
-    </li>
-    <li>
-    <a class="name" href="http://www.basselectric.net/">BASS Electric</a>
-    <address>856 Folsom Street, San Francisco, California 94107 </address>
-    <span class="phone">415-295-1600</span>
-    <span class="email">rlee@basselectric.net</span>
-    <span class="solutions">Air Sealing and Ventilation, Energy Audit, Water Heating, Solar Electric, Heating and Cooling</span>
-    <span class="credentials">San Francisco Energy Watch</span>
-    <span class="serves">Residential and commercial customers</span>
-    BASS Electric is a full scale electrical contractor specializing in energy audits, solar design/engineering/installation, lighting upgrades and installation of fuel cells.  For larger commercial clients, BASS can provide preventive maintenance and energy storage solutions.  We have extensive experience working on commercial and residential properties.  BASS Electric has a customized Multi-Family Energy Management Platform.  We are a turnkey solution for residential and commercial building owners and have experience working with SF Energy Watch in handling rebates and incentives to make the process as manageable possible for our clients.
-    </li>
-    <li>
-    <a class="name" href="http://www.citizengreensolutions.com/">Citizen Green Solutions</a>
-    <address>900 College Ave, Santa Rosa, California 95404 </address>
-    <span class="phone">707-576-1000</span>
-    <span class="email">Info@CitizenGreenSolutions.com</span>
-    <span class="solutions">Solar Electric, Solar Thermal, Water Heating</span>
-    <span class="serves">Commercial customers</span>
-    Citizen Green Solutions (www.CitizenGreenSolutions.com) provides financial consulting, system design, and installation of commercial grade solar thermal and photovoltaic (PV) systems. The company specializes in renewable energy solutions combining legal, tax, and accounting expertise with real-estate development experience, to provide an innovative financial modeling approach.
-    </li>
-    <li>
-    <a class="name" href="http://www.petersendean.com/">Petersen Dean Roofing &amp; Solar</a>
-    <address>7980 Enterprise Drive, Newark, California 94560 </address>
-    <span class="phone">408-219-3021</span>
-    <span class="email">bscott@petersendean.com</span>
-    <span class="solutions">Solar Electric, Reflective Roof Systems</span>
-    <span class="serves">Residential and commercial customers</span>
-    When it comes to your roof, there’s no one more qualified to repair it, replace it or add to it than PetersenDean. As a full-service roofing and solar contractor, our extensive experience completing complex residential and commercial projects means we not only understand your needs, but can meet them. From skilled project managers to courteous and motivated crews, we set the standard by which other roofing and solar companies are judged.
-    </li>
-    <li>
-    <a class="name" href="http://www.renewal.com/">American Home Renewal</a>
-    <address>310 Shaw Road, Suite A, South San Francisco, California 94080 </address>
-    <span class="phone">800-747-0272</span>
-    <span class="email">info@renewal.com</span>
-    <span class="solutions">Windows and Doors</span>
-    <span class="serves">Residential and commercial customers</span>
-    We are a family-run company that specializes in energy efficient window, door and siding replacement.  We offer an exclusive Satisfaction First! policy whereby we don't ask for any payment until you are completely happy with your remodel, ensuring a pleasant experience!
-    Diamond Certified Service Provider &amp; AAMA-certified Installation Masters!
-    </li>
-    <li>
-    <a class="name" href="http://www.charleswindows.com/">Charles Windows &amp; Exteriors</a>
-    <address>901 E Francisco Blvd, San Rafael, California 94901 </address>
-    <span class="phone">415-717-9155</span>
-    <span class="email">phil@charleswindows.com</span>
-    <span class="solutions">Windows and Doors</span>
-    <span class="credentials">BPI Certified Building Analyst Professional</span>
-    <span class="serves">Residential and commercial customers</span>
-    CHARLES Windows &amp; Exteriors provides replacement windows for residential and commercial property owners. We also are a leading provider/installer of siding and insulation.
-    </li>
-    <li>
-    <a class="name" href="http://www.tntconstructionsf.com/">TNT Construction</a>
-    <address>22 Richland Ave, San Francisco, California 94110 </address>
-    <span class="phone">415-867-5737</span>
-    <span class="email">tony@tntconstructionsf.com</span>
-    <span class="solutions">Air Sealing and Ventilation, High Efficiency Plumbing Fixtures, Insulation, Windows and Doors</span>
-    <span class="serves">Residential and commercial customers</span>
-    TNT is proud to be a part of San Francisco’s Green initiative.
-    Contact us and see how we can help you save energy and make your home more comfortable, beautiful and energy efficient.
-    TNT is a small local company that is dedicated to doing quality work at a fair price. We specialize in residential remodels and additions from a simple bathroom or kitchen remodel to adding additional square footage to an existing home. We offer energy saving services such as window replacements and insulation along with other energy saving upgrades to existing homes. TNT is a big fan of green building and recycling.
-    </li>
-    <li>
-    <a class="name" href="http://www.vista-solar.com/">Vista Solar</a>
-    <address>2985 Kifer Road, Santa Clara, California 95057 </address>
-    <span class="phone">408-844-7157</span>
-    <span class="email">sales@vista-solar.com</span>
-    <span class="solutions">Solar Electric</span>
-    <span class="serves">Residential and commercial customers</span>
-    Vista Solar is a family-owned and operated Northern California renewable energy systems integrator. We have our headquarters in Santa Clara, California, where we currently provide photovoltaic solar integration services to the greater Bay Area. Collectively, the Vista Solar Team has over two decades of experience working in the solar and renewable energy industry.
-    As your renewable energy partner, we are committed to helping you take control of your energy future with efficient, economical, clean power. It is our goal to offer excellence in service, quality, and pricing. With a pledge to achieve this goal through honesty, integrity, and sound business ethics, we strive to develop and maintain a lasting relationship with each of our customers.
-    </li>
-    <li>
-    <a class="name" href="http://www.recurve.com/">Recurve, Inc.</a>
-    <address>1167 Mission Street, San Francisco, California 94103 </address>
-    <span class="phone">415-294-5380 x-111</span>
-    <span class="email">sales@recurve.com</span>
-    <span class="solutions">Air Sealing and Ventilation, Insulation, Safety, Heating and Cooling, Energy Audit, Water Heating, Solar Thermal, Windows and Doors</span>
-    <span class="credentials">Home Performance with Energy Star, BPI Accredited Company, BPI Certified Building Analyst Professional, BPI Certified Envelope Professional, BPI Certified Heating Professional</span>
-    <span class="serves">Residential customers</span>
-    Recurve is a nationally-renowned leader in home energy audits and green energy remodeling. We use building science to transform the comfort, energy efficiency, and air quality of your home.  In addition to science-based home performance testing and evaluation, Recurve offers a wide range of construction services. We are a true turnkey operation, and our aim is to make it easy for you to bring your house up to Energy Star efficiency levels, while at the same time making your home more healthy and comfortable.  Recurve was recently named 3rd among Fast Company’s 2010 ranking of the World’s Most Innovative Companies in Energy Efficiency.  In December of 2009, Recurve was ranked as 13th among the Bay Area's fastest growing private companies.
-    </li>
-    <li>
-    <a class="name" href="http://www.sdi-insulation.com/">SDI Insulation, Inc.</a>
-    <address>370 Lang Road, Burlingame, California 94010 </address>
-    <span class="phone">650-685-5500</span>
-    <span class="email">sdelorenzi@sdi-insulation.com</span>
-    <span class="solutions">Air Sealing and Ventilation, Insulation, Energy Audit</span>
-    <span class="serves">Residential and commercial customers</span>
-    Full Service Insulation Contractor.  Remodels &amp; Retrofits.  SDI is an applicator for Home Energy Audit Work.  Attic, Wall, &amp;  Floor Insulation. Removals of all Insulation.  Air sealing, Batt, Blown &amp; Spray Foam Experts. Thermal Imaging, Budgets for Solar, PG&amp;E Rebates and Federal Tax Credits available.
-    </li>
-    <li>
-    <a class="name" href="http://greenhomesavvy.com/">Green Home Savvy</a>
-    <address>116 Portsmouth Drive, Novato, California 94949 </address>
-    <span class="phone">415-250-7515</span>
-    <span class="email">donn@greenhomesavvy.com</span>
-    <span class="solutions">Energy Audit</span>
-    <span class="serves">Residential customers</span>
-    Green Home Savvy offers home energy assessments with recommendations for energy retrofits, and is qualified under the San Francisco Green Finance program.
-    We have:
-    BPI-certified Building Analysts and CBPCA Home Performance Analysts.
-    HERS raters and Certified Energy Plans Examiners
-    </li>
-    <li>
-    <a class="name" href="http://www.jonesenergysolutions.com/">Jones Energy Solutions</a>
-    <address>201 Spear Street, Suite 1100, San Francisco, California 94105 </address>
-    <span class="phone">(415) 946-4015</span>
-    <span class="email">jonesenergysolutions@gmail.com</span>
-    <span class="solutions">Safety, Energy Audit</span>
-    <span class="credentials">BPI Certified Building Analyst Professional</span>
-    <span class="serves">Residential customers</span>
-    We at Jones Energy Solutions are BPI Certified Building Analyst Professionals, ensuring the highest quality standards and procedures are implemented for the evaluation of your home's energy performance. We provide comprehensive home energy audits and generate recommendations for energy efficiency retrofit opportunities. Our main goal is not only to find solutions to help homeowners save money on energy bills, but to balance each home to help the quality of our environment, and most importantly to promote the overall well being of the homeowner's comfort, health, and safety. Call us today for your home energy audit.
-    </li>
-    <li>
-    <a class="name" href="http://ultimatehomeperformance.com/">Ultimate Home Performance</a>
-    <address>3019 Monticello Ave, Oakland, California 94619 </address>
-    <span class="phone">510-936-1212</span>
-    <span class="email">ultimatehomeperformance@gmail.com</span>
-    <span class="solutions">Energy Audit</span>
-    <span class="credentials">BPI Certified Building Analyst Professional, BPI Certified Envelope Professional</span>
-    <span class="serves">Residential customers</span>
-    Call us to schedule your energy evaluation. Ultimate Home Performance offers full service energy audits that include infiltration testing, duct leakage testing, combustion safety testing, insulation evaluations and lighting assessments. Tired of drafty rooms and uncomfortable temperature extremes? "A proper diagnosis will always precede an effective prescription". We can show you how to maximize your family's comfort and health while decreasing your monthly energy costs.
-    </li>
-    <li>
-    <a class="name" href="http://www.atlasheat.com/">TUCK AIRE HEATING</a>
-    <address>340 ROEBLING, South San Francisco, California 94080 </address>
-    <span class="phone">650-873-7000</span>
-    <span class="email">KHALAF@ATLASHEAT.COM</span>
-    <span class="solutions">Heating and Cooling</span>
-    <span class="serves">Residential and commercial customers</span>
-    We only install top-quality, high-performance systems that meet the specific needs of your home (family), office, and climate. Specializing in Heating Systems • Air Conditioning • Duct Work • Service Repair • Maintenance • Air Duct Cleaning • Custom Registers.
-    </li>
-    <li>
-    <a class="name" href="http://www.newsolarinc.com/">New Solar Inc</a>
-    <address>1525 McCarthy Blvd, Suite 1000, Milpitas, California 95035 </address>
-    <span class="phone">510-712-0900</span>
-    <span class="email">info@newsolarinc.com</span>
-    <span class="solutions">Solar Electric, Energy Audit</span>
-    <span class="credentials">BPI Certified Building Analyst Professional</span>
-    <span class="serves">Residential and commercial customers</span>
-    Install solar photovoltaic systems on your roof top and start saving on your electricity bill. We offer installation of industry-leading solar photovoltaic systems on residential and commercial buildings. We can give your building a comprehensive energy efficiency audit, and follow up with retrofit service to improve your energy efficiency. Our professional and friendly staff serves our clients in San Francisco, the Bay Area, and the rest of California. Visit our website at www.newsolarinc.com.
-    </li>
-</ul>
+
+
+        <ul id="vendors">
+            <li>
+            <a class="name" href="http://www.beccaconstruction.com/">BECCA Costruction</a>
+            <address>627 Prentiss St, San Francisco, California 94110 </address>
+            <span class="phone">415.533.7215</span>
+            <span class="email">glenn@beccaconstruction.com</span>
+            <span class="solutions">Insulation, Air Sealing and Ventilation, Electrical and Lighting, Windows and Doors</span>
+            <span class="serves">Residential and commercial customers</span>
+            general building contractor specializing in residential and commercial construction.
+            </li>
+            <li>
+            <a class="name" href="http://www.woodenwindow.com/">Wooden Window, Inc.</a>
+            <address>849 29th Street, Emeryville, California 94608 </address>
+            <span class="phone">510 893-1157</span>
+            <span class="email">bill@woodenwindow.com</span>
+            <span class="solutions">Windows and Doors</span>
+            <span class="serves">Residential and commercial customers</span>
+            Wood Doors and Windows (and Storm Windows) for vintage homes and buildings built 1880-1940 . Weatherization and repair of your existing fenestration up to new custom wood window sash with high efficiency glass and customized weatherstripping.Historically Correct.  NO Vinyl or Aluminum.
+            </li>
+            <li>
+            <a class="name" href="http://www.greenroofelectric.com/">Green Roof Electric</a>
+            <address>220 Bush St Suite 424, San Francisco, California 94104 </address>
+            <span class="phone">707-545-0580</span>
+            <span class="email">Dwhite@greenroofelectric.com</span>
+            <span class="solutions">Solar Electric</span>
+            <span class="serves">Residential customers</span>
+            Green Roof Electric is a residential solar electric installation firm dedicated to building a sustainable future. As a full-service installation company we handle all aspects of the installation in house.  We evaluate a home's roof and electrical needs, design and install the panels, and handle any permitting and rebate paperwork on the customer's behalf.
+            Let our team of solar experts, electricians, and financial analysts evaluate your home and provide you with the most comprehensive financial projections of making the solar investment.
+            </li>
+            <li>
+            <a class="name" href="http://www.bangforyourgreenbuck.com/">Bang For your Green Buck &amp; JW Plumbing</a>
+            <address>118 Virginia Ave, San Francisco, California 94110 </address>
+            <span class="phone">650 804 2401</span>
+            <span class="email">gregmbullock@gmail.com</span>
+            <span class="solutions">Water Heating, High Efficiency Plumbing Fixtures, Solar Thermal, Insulation, Air Sealing and Ventilation, Energy Audit, Landscape Irrigation Systems</span>
+            <span class="serves">Residential and commercial customers</span>
+            Making the wisest home investments for your money and the Earth.  Specializing in water recycling and efficiency, greywater systems, sustainable landscapes, solar water heating.
+            </li>
+            <li>
+            <a class="name" href="http://www.diamondhomerestoration.com/">Diamond Home Restoration</a>
+            <address>1226 43rd Avenue, San Francisco, California 94122 </address>
+            <span class="phone">415-722-5034</span>
+            <span class="email">pace@diamondhomerestoration.com</span>
+            <span class="solutions">Air Sealing and Ventilation, Heating and Cooling, Water Heating, Solar Electric, Solar Thermal, Insulation, Electrical and Lighting, Windows and Doors</span>
+            <span class="serves">Residential customers</span>
+            Diamond Home Restoration is a restoration and remodel company.  Our focus is on strong communication, clear estimates and billing, quality craftsmanship, with an eye towards sustainable practices.  We are general contractors who work frequently on design/build projects and have a strong seismic background.  Our trusted relationships with our subcontractors ensures your custom home gets completed on time and on budget.  We are quietly building a large family of happy homes.
+            </li>
+            <li>
+            <a class="name" href="http://www.luntmarymor.com/">The Lunt Marymor Company</a>
+            <address>1270 45th Street, Emeryville, California 94608 </address>
+            <span class="phone">510-985-2889</span>
+            <span class="email">Leigh@LuntMarymor.com</span>
+            <span class="solutions">Water Heating, High Efficiency Plumbing Fixtures, Non-Residential High Efficiency Plumbing Fixtures, Solar Thermal</span>
+            <span class="serves">Residential and commercial customers</span>
+            Plumbing, Hydronic Heating, and Fire Sprinkler Contractors. Specializing in residential and light commercial new construction, remodel, and service and repair. Build-It Green Certified. Certified Green Plumber. PHCC.
+            </li>
+            <li>
+            <a class="name" href="http://www.equilibriumfs.com/">Equilibrium Energy + Design</a>
+            <address>214 Grand Ave, Oakland, California 94610 </address>
+            <span class="phone">510-931-6361</span>
+            <span class="email">laura@equilibriumfs.com</span>
+            <span class="solutions">Safety, Energy Audit</span>
+            <span class="credentials">BPI Certified Building Analyst Professional, BPI Certified Envelope Professional</span>
+            <span class="serves">Residential customers</span>
+            Get it right the first time. An Equilibrium Energy Upgrade Report will tell you what steps to take to make your home exactly you want it to be – Comfortable, Efficient and Healthy.  Let us take the guesswork out of the process.  We’ll be the detectives so you don’t have to be.  Equilibrium Energy + Design is an Independent Third Party Energy Auditor.
+            </li>
+            <li>
+            <a class="name" href="http://www.betterearthconstruction.com/">Better Earth Construction</a>
+            <address>240 Gates St, San Francisco, California 94110 </address>
+            <span class="phone">415-254-8034</span>
+            <span class="email">andrew@betterearthconstruction.com</span>
+            <span class="solutions">Air Sealing and Ventilation, Insulation, Safety, Heating and Cooling, Energy Audit, Water Heating, Geothermal, High Efficiency Plumbing Fixtures, Non-Residential High Efficiency Plumbing Fixtures, Solar Electric, Solar Thermal, Electrical and Lighting, Landscape Irrigation Systems</span>
+            <span class="serves">Residential and commercial customers</span>
+            </li>
+            <li>
+            <a class="name" href="http://energy-able.org/">Energy-Able, Inc.</a>
+            <address>16 Kenrick Drive, San Anselmo, California 94960 </address>
+            <span class="phone">415-259-9653</span>
+            <span class="email">andy@energy-able.org</span>
+            <span class="solutions">Air Sealing and Ventilation, Safety, Energy Audit</span>
+            <span class="credentials">Home Performance with Energy Star, BPI Certified Building Analyst Professional, BPI Certified Energy Efficient Multifamily Building Operations Specialist, BPI Certified Envelope Professional</span>
+            <span class="serves">Residential and commercial customers</span>
+            Energy-Able is a California non-profit providing energy efficiency services and retrofit proposals to consumers. The Energy-Able team is BPI certified for residential, commercial and multi-family building audits and has extensive building contracting and plumbing contracting experience. We will conduct a whole house energy audit with a full report on our findings and a cost estimate to complete the necessary and appropriate energy upgrade repairs. We are BPI trainers under CBPCA and CACTUS, LEED AP, NABCEP, HERS raters, and Green Point Raters. We are licensed, insured, and bonded and can provide the full array of services necessary for building owners to participate in the San Francisco Green Finance program.
+            </li>
+            <li>
+            <a class="name" href="http://www.buildingsolutions.com/">Building Solutions</a>
+            <address>1757 East Bayshore Road Suite 24, Redwood City, California 94063 </address>
+            <span class="phone">866-899-2517</span>
+            <span class="email">info@buildingsolutions.com</span>
+            <span class="solutions">Air Sealing and Ventilation, Safety, Heating and Cooling, Energy Audit, Water Heating, Solar Thermal, Insulation</span>
+            <span class="credentials">Home Performance with Energy Star</span>
+            <span class="serves">Residential and commercial customers</span>
+            Building Solutions has over 5 years experience as one of the Bay Area's premier Home Performance Testing and Contracting companies.
+            Whether our clients are uncomfortable in their homes, concerned by poor indoor air quality, or frustrated by growing utility bills, Building Solutions' performance test and subsequent reporting provides all of the details necessary to make the most informed and effective decisions to improve home performance.
+            And with the experience, knowledge and professionalism associated with our contracting team, our retrofits are conducted to the highest of standards and our work re-tested upon completion to ensure quality and results.
+            </li>
+            <li>
+            <a class="name" href="http://www.americansolar.net/">American Solar</a>
+            <address>475 Gate 5 Rd., #119, Sausalito, California 94965 </address>
+            <span class="phone">888-765-2751</span>
+            <span class="email">Info@AmericanSolar.Net</span>
+            <span class="solutions">Solar Electric, Solar Thermal, Energy Audit</span>
+            <span class="serves">Residential and commercial customers</span>
+            American Solar is a full service solar and renewable energy design, installation and consulting company. Our services also include project management and oversight, project financing, independent design, system commissioning, off grid islanding systems, property scale power management systems and Battery Backup systems. American Solar serves the commercial, government and residential markets in California and Hawaii.
+            </li>
+            <li>
+            <a class="name" href="http://renewalbyandersen.com/">Renewal by Andersen</a>
+            <address>30800 Santana Street, Hayward, California 94544 </address>
+            <span class="phone">510-400-7470</span>
+            <span class="email">beth.johnson@andersencorp.com</span>
+            <span class="solutions">Windows and Doors</span>
+            <span class="credentials">Home Performance with Energy Star</span>
+            <span class="serves">Residential and commercial customers</span>
+            Custom window and patio door replacement liision of Andersen Windows.  We handle everything start to finish.  Green Seal Certified.  Energy Star Partner of the Year in 2010.
+            </li>
+            <li>
+            <a class="name" href="http://www.habitatforliving.com/">Habitat For Living</a>
+            <address>po box 370507, Montara, California 94037</address>
+            <span class="phone">650-260-5433</span>
+            <span class="email">timpayne@gmail.com</span>
+            <span class="solutions">Air Sealing and Ventilation, Insulation, Safety, Reflective Roof Systems, Heating and Cooling, Energy Audit, Water Heating, High Efficiency Plumbing Fixtures, Non-Residential High Efficiency Plumbing Fixtures, Landscape Irrigation Systems, Windows and Doors</span>
+            <span class="credentials">Home Performance with Energy Star, BPI Certified Building Analyst Professional</span>
+            <span class="serves">Residential and commercial customers</span>
+            At Habitat for Living we work to improve your building infrastructure—where you live and work—to ensure a healthy, comfortable, and energy-efficient environment. We develop practical solutions to reduce your energy costs and build a green footprint in your community.
+            </li>
+            <li>
+            <a class="name" href="http://www.professorplumbsf.com/">Professor Plumb</a>
+            <address>2091 Folsom St., San Francisco, California 94110 </address>
+            <span class="phone">415-621-4673</span>
+            <span class="email">eve@professorplumbsf.com</span>
+            <span class="solutions">Water Heating, High Efficiency Plumbing Fixtures, Non-Residential High Efficiency Plumbing Fixtures, Solar Thermal</span>
+            <span class="serves">Residential and commercial customers</span>
+            Professor Plumb, a Certified Green Plumber, is dedicated to continued education, staying on the cutting edge of the newest growth in the Plumbing field: energy efficiency, including installation of H.E domestic hot water systems and high efficiency home heat systems, such as in-floor radiant and solar.  We take the responsibility of helping the world’s energy crises seriously by helping our customers find ways to conserve energy and reduce their environmental impact; the world has a problem and we have answers!
+            </li>
+            <li>
+            <a class="name" href="http://www.quantumbuilder.com/">Quantum Builder for Sustainable Living</a>
+            <address>1454 B Fourth Street, Berkeley, California 94710 </address>
+            <span class="phone">510.559.3488 x 152</span>
+            <span class="email">stefan@quantumbuilder.com</span>
+            <span class="solutions">Air Sealing and Ventilation, Water Heating, Energy Audit</span>
+            <span class="credentials">Home Performance with Energy Star</span>
+            <span class="serves">Residential and commercial customers</span>
+            We are a firm that starts with Energy Audits and small and mid size energy retrofits. We go all the way to complete energy remodels and also do new buildings.
+            Buildings are responsible for 40% of national energy consumption and 70% of total electrical consumption.  They emit 50% of CO2 emissions. Changing the way energy is used by buildings has tremendous potential to reduce our national energy crisis.  Q+ buildings reduce energy consumption for heating and cooling by 90%. This can be achieved in almost any climate zone for both new and retrofit projects.
+            </li>
+            <li>
+            <a class="name" href="http://www.calsolarworks.com/">Cal Solar Works</a>
+            <address>2612 Barrington Ct., Hayward, California 94545 </address>
+            <span class="phone">510 754-0514</span>
+            <span class="email">janh@calsolarworks.com</span>
+            <span class="solutions">Solar Electric, Solar Thermal</span>
+            <span class="credentials">Home Performance with Energy Star</span>
+            <span class="serves">Residential and commercial customers</span>
+            We specialize in designing and installing PV Solar and Solar Thermal systems for residential, commercial, non-profit and public sector clients.
+            We use the highest quality components and provide the highest possible quality workmanship.
+            We also install ultra-high efficient lighting systems with intelligent controls (motion sensors, daylight harvesting, scheduling etc.) in high-bay facilities (retail, warehousing, manufacturing, distribution).
+            </li>
+            <li>
+            <a class="name" href="http://www.innovativemech.com/">Innovative Mechanical, Inc.</a>
+            <address>80 Tanforan Avenue, South San Francisco, California 94080 </address>
+            <span class="phone">650-583-8222</span>
+            <span class="email">ssalem@innovativemech.com</span>
+            <span class="solutions">Air Sealing and Ventilation, Heating and Cooling, Water Heating, Insulation</span>
+            <span class="credentials">San Francisco Energy Watch</span>
+            <span class="serves">Residential and commercial customers</span>
+            Innovative Mechanical specializes in design build commercial and residential HVAC.  We provide 24-hour emergency service, annual maintenance agreements, new equipment installation, duct work fabrication and installation, and ventilation systems. In addition to HVAC we have an on site sheet metal shop that allows us to fabricate custom ducting, architectural and general sheet metal
+            </li>
+            <li>
+            <a class="name" href="http://www.solarworksca.com/">Solar Works</a>
+            <address>400 Morris Street, Suite C, Sebastopol, California 95472 </address>
+            <span class="phone">(707) 829-8282</span>
+            <span class="email">kara@solarworksca.com</span>
+            <span class="solutions">Solar Electric</span>
+            <span class="serves">Residential and commercial customers</span>
+            Solar Works is a full-service, licensed solar contractor, providing high quality solar systems for home, business and community. We offer expert in-house design and installation, extraordinary customer service, and the best warranties in the solar industry.
+            </li>
+            <li>
+            <a class="name" href="http://www.solarcraft.com/">SolarCraft Services, Inc</a>
+            <address>285-D Bel Marin Keys Blvd., Sonoma, California 95476 </address>
+            <span class="email">bsmith@solarcraft.com</span>
+            <span class="solutions">Solar Electric, Solar Thermal</span>
+            <span class="serves">Residential and commercial customers</span>
+            Twenty-six year old company focusing on Solar Electric, Hot Water and Pool heating for both residential and commercial use.  Fully licensed (B, C-46, C-10) employing certified design and in-house installation crews.
+            </li>
+            <li>
+            <a class="name" href="http://www.jimgardnerconstruction.com/">Jim Gardner Construction</a>
+            <address>3871 Piedmont Ave., Suite 13, Oakland, California 94611 </address>
+            <span class="phone">510-867-9220</span>
+            <span class="email">gardcon@sbcglobal.net</span>
+            <span class="solutions">Air Sealing and Ventilation, Insulation, Safety, Energy Audit, Heating and Cooling, Water Heating, High Efficiency Plumbing Fixtures, Solar Electric, Solar Thermal, Electrical and Lighting, Windows and Doors</span>
+            <span class="credentials">Home Performance with Energy Star</span>
+            <span class="serves">Residential customers</span>
+            We are a full-service Building Performance, Design-Build Remodeling and Structural Repair Company with over 30 years experience improving Bay Area homes.  We can help you improve the energy efficiency, health and safety, and comfort of your home and also address any remodeling or repair concerns that you may have at the same time. Our advanced Energy Audit and Building Performance Analysis includes a Structural Repair and Remodeling Needs Assesment from a staff member trained as a Certified Graduate Remodelor (NAHB) and a Certified Structural Repair Specialist (NAWSRC). If you are looking for a Contractor who can integrate all of your home improvement needs into a single package, please give us a call.
+            </li>
+            <li>
+            <a class="name" href="http://www.c2egreen.com/">c2e LLC</a>
+            <address>384 Bel Marin Keys, Novato, California 94949 </address>
+            <span class="phone">415-707-0303</span>
+            <span class="email">s.schramm@c2egreen.com</span>
+            <span class="solutions">Energy Audit</span>
+            <span class="credentials">BPI Certified Building Analyst Professional</span>
+            <span class="serves">Commercial customers</span>
+            C2E offers a wide range of environmental-consious energy solutions related to new and existing structures; carbon footprint audits, energy efficiency consluting, renewables.
+            </li>
+            <li>
+            <a class="name" href="http://www.energybeyonddesign.com/">Energy Beyond Design Inc.</a>
+            <address>4121 26th St., San Francisco, California 94131 </address>
+            <span class="phone">(415)-508-8161</span>
+            <span class="email">info@energybeyonddesign.com</span>
+            <span class="solutions">Air Sealing and Ventilation, Insulation, Safety, Energy Audit, Heating and Cooling, Water Heating, Solar Electric</span>
+            <span class="credentials">Home Performance with Energy Star, BPI Certified Building Analyst Professional</span>
+            <span class="serves">Residential and commercial customers</span>
+            Offering affordable energy audits and retrofits, Energy Beyond Design reduces your utility bills and environmental footprint while improving your home comfort and indoor air quality.
+            </li>
+            <li>
+            <a class="name" href="http://www.pholliesrussmurphy.com/">PholliesRussMurphy, Inc.</a>
+            <address>872 Elizabeth St, San Francisco, California 94114 </address>
+            <span class="phone">415-726-3063</span>
+            <span class="email">phollies@comcast.net</span>
+            <span class="solutions">Solar Electric, Water Heating, Air Sealing and Ventilation, Windows and Doors</span>
+            <span class="serves">Residential customers</span>
+            My company, PholliesRussMurphy, Inc, is a rather new company.  I used to own Phollies, a CA corporation, for over 20 years.  I have been doing remodel work over 20 years in San Francisco.  I have now stated PRM,Inc, and Solar Technologies Solutions Group.  I have completed a
+            the PG&amp;E  Solar Thermal Water class with Robert Cooley and Nick Stimmell at DVCollege.  I am poised to represent the market place with many new technologies and finance programs.
+            </li>
+            <li>
+            <a class="name" href="http://www.savewaterplumbing.com/">Voelker Plumbing</a>
+            <address>99 Arleta Ave., San Francisco, California 94134 </address>
+            <span class="phone">(415) 307-1917</span>
+            <span class="email">voelkerplumbing@yahoo.com</span>
+            <span class="solutions">Water Heating, High Efficiency Plumbing Fixtures, Non-Residential High Efficiency Plumbing Fixtures</span>
+            <span class="credentials">San Francisco Energy Watch</span>
+            <span class="serves">Residential and commercial customers</span>
+            Voelker Plumbing is a full service plumbing company specializing in commercial and restaurant  installation and remodels in the San Francisco Bay area. For over 20 years, we have been dedicated to providing all of our customers with skilled,professional plumbing services.
+            Please visit our website at: www.savewaterplumbing
+            </li>
+            <li>
+            <a class="name" href="http://www.maggetticonstruction.com/">Maggetti Construction</a>
+            <address>1770 Hamilton Avenue, San Jose, California 95125 </address>
+            <span class="phone">408-600-8791</span>
+            <span class="email">Rich@FreedomSolar.net</span>
+            <span class="solutions">Solar Electric</span>
+            <span class="serves">Residential and commercial customers</span>
+            The Freedom Solar liision of Maggetti Construction designs and builds solar PV systems for homes and small businesses.  Maggetti Construction has served the Bay Area for 25 years.  We are an authorized SunPower dealer.
+            </li>
+            <li>
+            <span class="name">Twin Rivers Green Construction</span>
+            <address>38 Miller Ave. Suite # 482, Mill Valley, California 94941 </address>
+            <span class="phone">916.753.9715</span>
+            <span class="email">multitrade@wildblue.net</span>
+            <span class="solutions">Air Sealing and Ventilation, Insulation, Safety, Reflective Roof Systems, Heating and Cooling, Energy Audit, Water Heating, Geothermal, High Efficiency Plumbing Fixtures, Non-Residential High Efficiency Plumbing Fixtures, Solar Electric, Solar Thermal, Landscape Irrigation Systems, Windows and Doors</span>
+            <span class="credentials">Home Performance with Energy Star, BPI Certified Envelope Professional</span>
+            <span class="serves">Residential and commercial customers</span>
+            Twin Rivers Green Construction (TRGC) provides energy efficiency services and retrofit proposals to consumers. The TRGC team is BPI certified for residential, commercial and multi-family building audits and has extensive building contracting and plumbing contracting experience which complements their 35 years of retrofit building experience.
+            The retrofit team has earned the Energy Efficient award from Flex Your Power. We will conduct a whole house energy audit with a full report on our findings and a cost estimate to complete the necessary and appropriate energy upgrade repairs.
+            We are BPI trainers under CBPCA and CACTUS, LEED AP, NABCEP, HERS raters, and Green Point Raters. We are licensed, insured, and bonded and can provide the full array of services necessary for building owners to participate in the San Francisco Green Finance program.
+            </li>
+            <li>
+            <a class="name" href="http://www.emcosystems.net/">EMCo Systems Solutions, Inc.</a>
+            <address>607 Crane Avenue, San Mateo, California 94404 </address>
+            <span class="phone">650-525-1632</span>
+            <span class="email">design@emcosystems.net</span>
+            <span class="solutions">Air Sealing and Ventilation, Reflective Roof Systems, Heating and Cooling, Energy Audit, Solar Electric, Solar Thermal</span>
+            <span class="serves">Commercial customers</span>
+            EMCo Systems Solutions, Inc. is a highly specialized GREEN project consulting and management company which delivers custom energy management systems, designs, concepts and solutions for and with general contractors, property owners and end users to conserve water, energy and lower operating costs.
+            </li>
+            <li>
+            <a class="name" href="http://www.schmittheating.com/">Schmitt Heating Company</a>
+            <address>34 Woodward Street, San Francisco, California 94103 </address>
+            <span class="phone">415-522-0966</span>
+            <span class="email">Caroline@schmittheating.com</span>
+            <span class="solutions">Heating and Cooling</span>
+            <span class="serves">Residential and commercial customers</span>
+            Schmitt Heating and Air Conditioning Company has been installing furnaces and air conditioning in San Francisco for over 100 years.
+            </li>
+            <li>
+            <a class="name" href="http://www.oxypower.com/">Occidental Power</a>
+            <address>3629 Taraval Street, San Francisco, California 94116 </address>
+            <span class="phone">415-681-8861</span>
+            <span class="email">greg@oxypower.com</span>
+            <span class="solutions">Solar Electric, Solar Thermal</span>
+            <span class="serves">Residential and commercial customers</span>
+            Occidental Power, Solar, Wind &amp; Cogeneration (CSLB #591549 / B license and C-46) is the oldest and most experienced solar design and build firm in San Francisco. We lead the way in solar heating and solar energy in the city. Every job we do is designed by our professional staff and often meets or exceeds government and industrial codes.
+            We uphold good business practices including:
+            - Our philosophy to provide high quality solar energy systems
+            - Our commitment to environmental and social responsibility
+            - Employing local talent (e.g. Urban League, Bayview-Hunters Point alternative energy programs, California Conservation Corps, and Environmental    Degree Programs of California state universities)
+            </li>
+            <li>
+            <a class="name" href="http://www.signaturesolardesign.com/">Signature Solar Design</a>
+            <address>16495 Vineyard Blvd., Morgan Hill, California 95037 </address>
+            <span class="phone">4087829944</span>
+            <span class="email">ssdsolar@yahoo.com</span>
+            <span class="solutions">Insulation, Reflective Roof Systems, Energy Audit, Solar Electric, Solar Thermal, Air Sealing and Ventilation, Electrical and Lighting</span>
+            <span class="serves">Residential and commercial customers</span>
+            Signature Solar Design offers innovative solutions and custom applications for renewable energy needs. SSD specializes in Built In Photovoltaic (BiPV) and architectural PV that allow solar technologies to be integrated into building structure such as roofs, skylights, walls, and more.
+            </li>
+            <li>
+            <a class="name" href="http://nsplumb.com/">North and South Plumbing</a>
+            <address>625, San Francisco, California 94117 </address>
+            <span class="phone">415 573 5025</span>
+            <span class="email">frankiekeenan1@aol.com</span>
+            <span class="solutions">Water Heating, High Efficiency Plumbing Fixtures, Non-Residential High Efficiency Plumbing Fixtures, Insulation, Solar Thermal</span>
+            <span class="serves">Residential and commercial customers</span>
+            We have over 30 years experience in the Plumbing industry, 15 in  Europe and 15 in the Bay Area. We cover all aspects of the industry from residential, commercial and hydronic/solar fields.
+            We are a customer driven organization that work with you to make your projects run as smooth as possible. We are convinced you will actually enjoy working with North and South Plumbing.
+            </li>
+            <li>
+            <a class="name" href="http://www.stuckertheat.com/">Stuckert Heating &amp; Sheet Metal, Inc.</a>
+            <address>7144 Mission Street, Daly City, California 94014 </address>
+            <span class="phone">6507551881</span>
+            <span class="email">stuckertheating@comcast.net</span>
+            <span class="solutions">Heating and Cooling</span>
+            <span class="serves">Residential and commercial customers</span>
+            Stuckert Heating &amp; Sheet Metal has a tradition of meeting customer needs. From the most complex installation to routine service and maintenance, Stuckert Heating &amp; Sheet Metal has the tools, the people, and the products to provide a system to fit your needs.  Additionally,  we are a family owned and operated company that has been serving San Francisco, Daly City &amp; Bay Area since 1963.
+            </li>
+            <li>
+            <a class="name" href="http://covenanteandassociates.com/">Covenent &amp; Associates Inc.</a>
+            <address>770 L Street   ste. 950, Sacramento, California 95814 </address>
+            <span class="phone">510-827-6924</span>
+            <span class="email">covenergy@yahoo.com</span>
+            <span class="solutions">Energy Audit</span>
+            <span class="credentials">BPI Certified Building Analyst Professional</span>
+            <span class="serves">Residential and commercial customers</span>
+            Covenant &amp; Associates Inc., specializes in Residential and small commercial Energy Audits, and retrofits. Our Auditors are BPI certified, along with our General Contractor.
+            We are Home Performance Contractors, with emphasis on the Building as a System concept. We us up to date equipment, such as minneapolis Blower Door and Duct Blaster Systems, along with Infrared Imaging, which gives us a more precise diagnosis.
+            </li>
+            <li>
+            <a class="name" href="http://www.albionpower.com/">Albion Power Company</a>
+            <address>871 Oak Street, San Francisco, California 94117 </address>
+            <span class="phone">415-334-2011</span>
+            <span class="email">cadams@albionpower.com</span>
+            <span class="solutions">Solar Electric, Solar Thermal, Energy Audit</span>
+            <span class="serves">Residential and commercial customers</span>
+            Albion Power Company's professional focus is to provide "best trade practices" for the construction of solar electric, solar hot water, and energy efficiency installations.  From commercial projects at Beringer Winery to custom residential installations in Bernal Heights, our staff provides the highest quality regardless of system size so as to expand a 21st Century economy.  We are a local business headquartered in San Francisco.
+            </li>
+            <li>
+            <a class="name" href="http://www.luminalt.com/">Luminalt Energy Corporation</a>
+            <address>1320 Potrero Avenue, San Francisco, California 94110 </address>
+            <span class="phone">(415) 641-4000</span>
+            <span class="email">admin@luminalt.com</span>
+            <span class="solutions">Energy Audit, Water Heating, Solar Electric, Solar Thermal, Heating and Cooling</span>
+            <span class="credentials">San Francisco Energy Watch</span>
+            <span class="serves">Residential and commercial customers</span>
+            Luminalt designs, installs, and maintains premium solar electric and hot water systems in the San Francisco Bay Area.
+            </li>
+            <li>
+            <a class="name" href="http://www.abrightideaelectrical.com/">A Bright Idea Electrical</a>
+            <address>542 4th Avenue, San Francisco, California 94118 </address>
+            <span class="email">GreenSF@abrightideaelectrical.com</span>
+            <span class="solutions">Solar Electric, Energy Audit</span>
+            <span class="serves">Residential and commercial customers</span>
+            </li>
+            <li>
+            <a class="name" href="http://www.buildingefficiency.net/">Building Efficiency</a>
+            <address>2611 47th ave, San Francisco, California 94116 </address>
+            <span class="phone">866.945.0278</span>
+            <span class="email">david@buildingefficiency.net</span>
+            <span class="solutions">Air Sealing and Ventilation, Insulation, Safety, Reflective Roof Systems, Energy Audit, Heating and Cooling, Water Heating, High Efficiency Plumbing Fixtures, Solar Electric, Solar Thermal, Landscape Irrigation Systems, Windows and Doors</span>
+            <span class="credentials">San Francisco Energy Watch, Home Performance with Energy Star, BPI Certified Building Analyst Professional</span>
+            <span class="serves">Residential and commercial customers</span>
+            We are a one-stop shop for building performance contracting to eliminate wasted energy, ensure peak performance of heating, ventilation and cooling systems, and maximize renewable energy production.  Our Home Energy Audit/Whole Building Performance Test involves a thorough investigation of the entire building instead of focusing on a single component.  Whole building performance provides integrated design to maximize energy savings, comfort, and environmental care.
+            </li>
+            <li>
+            <a class="name" href="http://www.solarcity.com/">SolarCity</a>
+            <address>393 Vintage Park Dr, San Mateo, California 94404 </address>
+            <span class="phone">650-638-1028</span>
+            <span class="email">info@solarcity.com</span>
+            <span class="solutions">Air Sealing and Ventilation, Insulation, Reflective Roof Systems, Energy Audit, Water Heating, Solar Electric, Safety, Heating and Cooling, Solar Thermal</span>
+            <span class="credentials">Home Performance with Energy Star, BPI Certified Building Analyst Professional</span>
+            <span class="serves">Residential and commercial customers</span>
+            SolarCity is the nation's leading full-service solar provider for homeowners, businesses and government organizations—the first company to provide solar energy system design, financing, installation and monitoring services from a single source.  SolarCity has provided solar energy systems to hundreds of San Francisco homeowners and businesses including Grace Cathedral.  In addition to its award winning solar services, SolarCity now offers comprehensive home performance, energy efficiency, audit and upgrade services that can be financed through the GreenFinanceSF PACE loan program.
+            </li>
+            <li>
+            <a class="name" href="http://www.belenussolar.com/">Belenus Solar</a>
+            <address>729 Andover St, San Francisco, California 94110 </address>
+            <span class="phone">415 244 6383</span>
+            <span class="email">david@belenussolar.com</span>
+            <span class="solutions">Solar Electric</span>
+            <span class="serves">Residential and commercial customers</span>
+            At Belenus we wish to change your life- and the lives of many others - by assisting you in increasing your energy effiency while dramatically reducing your electrical costs. We will help you become environmentally friendly by providing you with world-leading solar solutions.
+            </li>
+            <li>
+            <a class="name" href="http://www.saveenergyco.com/">Save energy company</a>
+            <address>315 petaluma blvd. s., Petaluma, California 94952 </address>
+            <span class="phone">415 824-6010 x 202</span>
+            <span class="email">jgorman@saveenergyco.com</span>
+            <span class="solutions">Energy Audit, High Efficiency Plumbing Fixtures, Air Sealing and Ventilation, Windows and Doors</span>
+            <span class="credentials">BPI Certified Building Analyst Professional, BPI Certified Envelope Professional</span>
+            <span class="serves">Residential customers</span>
+            Celebrating it's 28th, Save Energy Company is an award winning retrofit contractor.  Although we are now located in Petaluma after 20 years in the Mission, we still service San Francisco every day.  Primarily a window and door replacment contractor as of this writing, we are pursuing a more Building Analysis direction and are BPI  and HERS certified.  We were an active insulation contractor for many years and had worked on a duct sealing program with PG&amp;E for three years, so our fundamental understanding of HVAC systems, duct sealing and building envelope sealing is extensive.
+            </li>
+            <li>
+            <a class="name" href="http://www.pellareplacement.com/">Pella Window and Doors</a>
+            <address>1717 4th Street, Ste B., Berkeley, California 94710 </address>
+            <span class="phone">510-292-2900</span>
+            <span class="email">crispenlc@pella.com</span>
+            <span class="solutions">Windows and Doors</span>
+            <span class="credentials">Home Performance with Energy Star</span>
+            <span class="serves">Residential customers</span>
+            Pella builds beautiful, energy- efficient windows and doors with meaningful details that matter every day. From selecting your new windows and doors, through the day we install them in your home, Pella’s skilled professionals will help make replacing your old windows and doors a highly satisfying experience.
+            </li>
+            <li>
+            <a class="name" href="http://www.practicalgreenbuilders.com/">Avalon Builders, Inc.</a>
+            <address>23900 Farm Road, Sonoma, California 95476 </address>
+            <span class="phone">707.939.9221</span>
+            <span class="email">michael@practicalgreenbuilders.com</span>
+            <span class="solutions">Air Sealing and Ventilation, Safety, Energy Audit, Heating and Cooling, Solar Electric, Solar Thermal</span>
+            <span class="credentials">Home Performance with Energy Star</span>
+            <span class="serves">Residential and commercial customers</span>
+            Building and remodeling sustainably in Northern California for over 20 years.  First General Contractor in Marin County to be declared a Green Business.  Member of the California Building Performance Contractors Association.  Dedicated to improving homes by combining energy efficiency, comfort, safety, aesthetics, and structural integrity.
+            </li>
+            <li>
+            <a class="name" href="http://renewableswest.com/">Renewables West</a>
+            <address>2756 Alvarado Street, Unit W-A, San Leandro, California 94577 </address>
+            <span class="phone">510-895-0774</span>
+            <span class="email">david@renewableswest.com</span>
+            <span class="solutions">Solar Electric</span>
+            <span class="serves">Residential and commercial customers</span>
+            Renewables West provides service in solar, wind and renewable technologies.  Established in January ‘09, we specialize in mobile, portable and hybrid solar power generators, stand-alone solar LED lighting systems and related product lines.  We also offer competitive pricing on solar PV modules and inverters for residential and commercial installations.
+            We invite you to visit our website to find out more about our product lines, especially the SolaRover Mobile Generator, which is announcing new, lower pricing and many new features such as variable-tilt array, advanced-lead-acid batteries, and an optional all-aluminum frame.  For shipping worldwide, this system fits in a standard 20-foot container.
+            </li>
+            <li>
+            <a class="name" href="http://www.creativeenergy.com/">Creative Energy Corporation</a>
+            <address>3419 Regatta Blvd, Richmond, California 94804 </address>
+            <span class="phone">5102372300</span>
+            <span class="email">kyleg@creativeenergy.com</span>
+            <span class="solutions">Solar Electric</span>
+            <span class="serves">Residential customers</span>
+            Creative Energy is an authorized Sunpower Dealer/Installer of Photvoltaic (PV) Solar Electric in the greater bay area.
+            </li>
+            <li>
+            <a class="name" href="http://www.sunfirstsolar.com/">Sun First!</a>
+            <address>3060 Kerner Blvd. Ste W, San Rafael, California 94901 </address>
+            <span class="phone">4154585870</span>
+            <span class="email">chet@sunfirstsolar.com</span>
+            <span class="solutions">Solar Electric, Solar Thermal</span>
+            <span class="serves">Residential and commercial customers</span>
+            Sun First! Solar has been in the solar business since 1984. Our mission is to protect the beauty of our environment and to prevent the depletion of natural resources through the use of renewable energy.  Sun First! will handle the entire job from design to installation, including obtaining the necessary permits, financing and approvals.
+            </li>
+            <li>
+            <a class="name" href="http://www.rps-solar.com/">Renewable Power Solutions Inc.</a>
+            <address>2029 O'Toole Ave, San Jose, California 95131 </address>
+            <span class="phone">408-998-7400</span>
+            <span class="email">info@rps-Solar.com</span>
+            <span class="solutions">Solar Electric, Solar Thermal</span>
+            <span class="credentials">San Francisco Energy Watch</span>
+            <span class="serves">Residential and commercial customers</span>
+            Company Background
+            Renewable Power Solutions Inc. (Power Solutions) was established in 1998 to provide renewable energy solutions such as solar electric, wind, and micro hydro power systems to help you become independent of the grid. We are a customer service oriented company with 100% customer satisfaction since 1998. Renewable Power Solutions Inc. is a Diamond Certified company.
+            Experience
+            We have 11 years of experience in the alternative energy industry, using current technologies and state of the art techniques to ensure the best possible solar electric system to meet the needs of our customers. We are a local company in San Jose, California, providing service for the state of California. You can rest assured that Renewable Power Solutions Inc. will be in business to service your warranty.
+            Our Commitment to You
+            Renewable Power Solutions Inc.'s commitment to the public is to design and install the solar electric system that best suits your family or business needs. By using our 11 + years of experience in the alternative energy industry, current technologies, and state of the art techniques, we will ensure the best possible solar electric system for you. As a Diamond Certified company, we can only offer you 100% customer satisfaction
+            Leadership
+            Renewable Power Solutions Inc. is the first solar integrator in California to have an approved state apprenticeship program. This program sets the standard in the industry that eventually all solar integrators will follow. Having a qualified installer is a must.
+            Our Principals
+            Integrity, Leadership, and High Standards are only part of our principals. We only represent manufacturers that are proven to have excellent customer service, the most reliable products, and the least environmental impact during manufacturing. Our 100% customer satisfaction rating is our most important certification. We will not sacrifice it by representing manufacturers that do not share our high standards for sustainability and customer satisfaction.
+            Our Solution
+            We would like for everyone to be energy independent and that includes you. Our solution will be presented to you in simple fashion; our engineering team is not allowed to do proposals. We warranty the simplicity of our proposal to make sense environmentally and economically. Your nextdoor neighbors' solutions is not necessary the right solution for you. We provide you with one-on-one attention from the initial visit to the last one.
+            We are a Dimond Certified company for the last 4 years
+            </li>
+            <li>
+            <a class="name" href="http://www.sungevity.com/">Sungevity</a>
+            <address>66 Franklin, Suite 310, Oakland, California 94607 </address>
+            <span class="phone">510.496.5500</span>
+            <span class="email">sungevity@gmail.com</span>
+            <span class="solutions">Solar Electric</span>
+            <span class="serves">Residential customers</span>
+            Sungevity specializes in the design, financing, installation, and maintenance of home solar systems. We currently offer a 0 down, 10 year Solar Lease.
+            </li>
+            <li>
+            <a class="name" href="http://www.sunwatersolar.com/">SunWater Solar</a>
+            <address>865 Marina Bay Parkway Suite 39, Richmond, California 94804 </address>
+            <span class="phone">SunWater Solar</span>
+            <span class="email">info@sunwatersolar.com</span>
+            <span class="solutions">Solar Thermal</span>
+            <span class="serves">Residential and commercial customers</span>
+            SunWater Solar designs, installs and services solar thermal systems that lower utility bills, reduce greenhouse gas emissions and help clients meet sustainability requirements. From system design to project management, SunWater Solar has implemented solar thermal technology for a variety of applications, including domestic hot water heating, process heating and pool heating. Founded in 2007 and based in Richmond, California, SunWater Solar serves a wide variety of customers and focuses exclusively on solar thermal technology.
+            </li>
+            <li>
+            <a class="name" href="http://www.energywiseamerica.com/">Energy Wise America, Inc.</a>
+            <address>4340 Redwood Hwy, Suite 50, San Rafael, California 94903 </address>
+            <span class="phone">415.305.3899</span>
+            <span class="email">toddmeyer@ewamerica.com</span>
+            <span class="solutions">Heating and Cooling</span>
+            <span class="credentials">San Francisco Energy Watch</span>
+            <span class="serves">Commercial customers</span>
+            Energy Wise America is the recognized leader in providing energy efficiency
+            solutions for small and medium-sized businesses. We work with local and
+            state utility rebate programs to insure our customers the fastest and
+            highest return on their investment possible. Energy Wise America is
+            dedicated to providing exceptional customer service. We are constantly
+            looking for ways to assist our customers lower energy usage and reduce
+            costs.
+            At Energy Wise America we specialize in saving our customers money by
+            providing state-of-the-art products and services that will save energy
+            consumption and significantly lower energy costs.
+            </li>
+            <li>
+            <a class="name" href="http://www.aoenergy.net/">AO Energy and Design</a>
+            <address>708 Ada Street, San Mateo, California 94401 </address>
+            <span class="phone">650-826-0725</span>
+            <span class="email">aoenergy@gmail.com</span>
+            <span class="solutions">Air Sealing and Ventilation, Energy Audit</span>
+            <span class="serves">Residential customers</span>
+            HERS Rater Diagnostic testing and Verification)
+            Energy Audits
+            Title 24 Compliance Reports
+            Energy Efficiency Consultation
+            Duct testing and Blower Door Testing
+            </li>
+            <li>
+            <a class="name" href="http://www.sunlightandpower.com/">Sun Light &amp; Power</a>
+            <address>1035 Folger Ave., Berkeley, California 94710 </address>
+            <span class="phone">(510) 845-2997</span>
+            <span class="email">eric@sunlightandpower.com</span>
+            <span class="solutions">Solar Electric, Solar Thermal</span>
+            <span class="serves">Residential and commercial customers</span>
+            Sun Light &amp; Power is a leading solar integrator.  Since 1976 we have created innovative solar solutions for businesses and homes that help preserve and protect the planet’s vital resources.
+            We offer customers smart, cost-effective energy packages that combine photovoltaic solar electricity (PV) and solar water heating (SWH) along with energy efficiency and conservation.
+            We work with a full range of businesses and residential customers as well as non-profits, architects, general contractors, utilities and municipalities . Whether you are planning affordable housing, a carport or corporate headquarters, our staff will deliver end-to-end oversight of our solar project, ensuring its completion on time and on budget.
+            </li>
+            <li>
+            <span class="name">FOSCO</span>
+            <address>763- 8Th Avenue, Suite-A, San Francisco, California 94118 </address>
+            <span class="phone">415-3871756</span>
+            <span class="email">kilbree@gmail.com</span>
+            <span class="solutions">Air Sealing and Ventilation, Safety, Heating and Cooling, Insulation, Water Heating, High Efficiency Plumbing Fixtures, Solar Electric, Solar Thermal, Windows and Doors</span>
+            <span class="credentials">San Francisco Energy Watch</span>
+            <span class="serves">Residential customers</span>
+            FOSCO, Contractors &amp; Environmental Consultants is a San Francisco based company recognized for its excellent client service, reliability and effectiveness in environmental consulting and regulatory compliance.
+            We provide home owners and businesses with testing and hazard evaluation, training, help with project/building design and management services related to energy use, envelope tightening etc. and environmental site assessments.
+            </li>
+            <li>
+            <a class="name" href="http://www.bayenergy.com/">Bay Area Energy Solutions</a>
+            <address>1326 Marsten Road, Burlingame, California 94010 </address>
+            <span class="phone">650-375-5955</span>
+            <span class="email">rhymes@bayenergy.com</span>
+            <span class="solutions">Solar Electric</span>
+            <span class="credentials">San Francisco Energy Watch</span>
+            <span class="serves">Residential and commercial customers</span>
+            We are a full sevice Solar Photovoltaic and Thermal Installation Company. We specialize in custom projects for detail oriented clients that incorporate a more comprehensive look at total home energy performance. We are partnered with a premier bay area roofing company, which serves as a perfect compliment to our solar installation team. This partnership allows us to offer a more seamless integration process, virtually eliminating the often problematic aspect of waterproofing penetrations. With expert roofing and adept solar installation, our customers have come to expect and receive the utmost in quality and service.
+            </li>
+            <li>
+            <a class="name" href="http://hersolar.com/">HER Solar~ Home Energy Ratings &amp; Solar</a>
+            <address>565 English Ave.  #4, Monterey, California 93940 </address>
+            <span class="phone">831-920-1926</span>
+            <span class="email">jennifer@hersolar.com</span>
+            <span class="solutions">Energy Audit</span>
+            <span class="credentials">Home Performance with Energy Star</span>
+            <span class="serves">Residential and commercial customers</span>
+            HERS Ratings:  Perform Home Energy Ratings/Audits for Energy Efficiency upgrades, PACE, Energy Efficient Mortgages
+            HERS testing for NSHP, Energy Star homes, Green Point Rated, LEED
+            Green Point Ratings:   New/Existing Single or Multi-family homes
+            Title 24 Energy Compliance  documentation:  New/Existing construction-Residential or NonResidential.
+            Consulting:  LEED for Homes, Passive House, Solar, Green
+            Real Estate Broker Services
+            </li>
+            <li>
+            <a class="name" href="http://www.advancedhomeenergy.com/">Advanced Home Energy</a>
+            <address>4907 Central Ave, Richmond, California 94804 </address>
+            <span class="phone">(510)540-4860</span>
+            <span class="email">dvir@advancedhomeenergy.com</span>
+            <span class="solutions">Air Sealing and Ventilation, Insulation, Safety, Energy Audit, Heating and Cooling, Solar Electric, Solar Thermal, Windows and Doors</span>
+            <span class="credentials">BPI Certified Building Analyst Professional</span>
+            <span class="serves">Residential and commercial customers</span>
+            Energy Efficient Home Solutions
+            Advanced Home Energy (AHE) is the leading Home Performance contractor in the San Francisco East Bay. AHE provides expert guidance and services to home owners who want an energy efficient home and want to reduce their personal environmental impact.
+            Home Performance
+            Home performance is an energy efficiency strategy in which contractors address homes as whole systems, rather than in discrete components. Home performance contractors integrate expertise in all areas affecting home energy use; insulation, windows, heating and cooling, water heating, etc.. By integrating treatment of all factors in a home’s energy use, AHE services are solution-oriented, cost-effective, and easier for consumers to use than traditional efficiency methods.
+            Home Energy Audit
+            We provide a home energy audit to diagnose all the components of of a building. We then identify the areas for greatest potential and create a work package that is tailored to the unique issues of the home. By using our services home owners reduce their monthly utility bills, reduce their carbon footprint, and make their home more comfortable throughout the year.
+            </li>
+            <li>
+            <a class="name" href="http://www.californiasolarsystem.com/">California Solar Systems</a>
+            <address>1000 Foster City Blvd. #1204, San Mateo, California 94404 </address>
+            <span class="phone">(800) 324-1978</span>
+            <span class="email">admin@casolarsys.com</span>
+            <span class="solutions">Solar Electric</span>
+            <span class="serves">Residential and commercial customers</span>
+            California Solar Systems, Inc.specializes in residential and commercial solar electric systems. A SunPower Premium Dealer, we combine technical expertise, project management experience, exceptional customer service and state of the art engineering to give our customers a fully integrated solar package at a fair and competitive price. With our simple, sleek design your system will be highly efficient and will last for decades.
+            </li>
+            <li>
+            <a class="name" href="http://www.advantageenergyaudits.com/">Advantage Energy Audits</a>
+            <address>64 Lyford Dr, Belvedere Tiburon, California 94920 </address>
+            <span class="phone">415-699-6300</span>
+            <span class="email">ftulp@advantageenergyaudits.com</span>
+            <span class="solutions">Insulation, Energy Audit</span>
+            <span class="credentials">BPI Certified Building Analyst Professional</span>
+            <span class="serves">Residential customers</span>
+            Independent third party Energy Auditor.
+            </li>
+            <li>
+            <a class="name" href="http://www.separtners.com/">Sustainable Energy Partners</a>
+            <address>2588 Mission St, San Francisco, California 94110 </address>
+            <span class="phone">415-648-1299</span>
+            <span class="email">ben@separtners.com</span>
+            <span class="solutions">Energy Audit</span>
+            <span class="credentials">Home Performance with Energy Star</span>
+            <span class="serves">Residential and commercial customers</span>
+            Sustainable Energy Partners (SEP) is a nationally recognized clean energy consulting firm. SEP is uniquely qualified to provide design and consulting services for the commercial and multi-family residential sectors.
+            SEP can provide three levels of detail for an energy audit:
+            Walk-through Assessment: Analyze energy bills and a brief visual survey of the facility. Identifies no-cost and low-cost opportunities.
+            Energy Survey and Analysis: A more detailed analysis is conducted, including a breakdown of how energy is used within the building. Potential capital-intensive opportunities are identified in the final report for further research and analysis. This is the typical level of audit.
+            Detailed Analysis of Capital-Intensive Modifications (Investment-grade Audit): This analysis focuses on capital-intensive opportunities and provides a higher degree of monitoring, data collection, and engineering analysis. The report includes detailed cost and savings information with a high-level of confidence sufficient for major capital investment decisions, and may include a reasonable timeline for implementation of each recommendation.
+            </li>
+            <li>
+            <a class="name" href="http://www.realgoodssolar.com/">Real Goods Solar</a>
+            <address>27 Simms Street, San Rafael, California 94901 </address>
+            <span class="phone">415-342-1017</span>
+            <span class="email">solar@realgoods.com</span>
+            <span class="solutions">Solar Electric</span>
+            <span class="serves">Residential and commercial customers</span>
+            Real Goods Solar is a leading solar energy integrator, having installed over 5,500 solar electric systems for both residential and commercial properties. Real Goods Solar offers turnkey solar energy solutions, and has 32 years of experience in solar energy, beginning with its sale of the first solar photovoltaic panels in the United States in 1978. With offices in San Rafael, Richmond, Campbell, Fresno, Santa Cruz, Murrieta, and Hopland, California, as well as in Boulder, Colorado, Real Goods Solar is one of the largest residential solar installers in the United States.
+            </li>
+            <li>
+            <span class="name">Flying Colors</span>
+            <address>15 AMBER DR, San Francisco, California 94131 </address>
+            <span class="phone">415-564-4500</span>
+            <span class="email">cbpca@flyingcolors.com</span>
+            <span class="solutions">Air Sealing and Ventilation, Safety, Energy Audit, Heating and Cooling, Water Heating, Insulation, Windows and Doors</span>
+            <span class="credentials">BPI Certified Building Analyst Professional</span>
+            <span class="serves">Residential and commercial customers</span>
+            Our company is commited to the concept of the building as a system.  We will work with our clients to develop a project that will deliver measurable results in energy efficiency, safety, and comfort
+            </li>
+            <li>
+            <a class="name" href="http://www.emersonenvironmental.com/">Emerson Environmental</a>
+            <address>160 Plymouth Ave, San Carlos, California 94070 </address>
+            <span class="phone">(650) 281-9805</span>
+            <span class="email">info@emersonenvironmental.com</span>
+            <span class="solutions">Air Sealing and Ventilation, Safety, Energy Audit</span>
+            <span class="credentials">BPI Certified Building Analyst Professional, BPI Certified Envelope Professional</span>
+            <span class="serves">Residential customers</span>
+            Schedule Your Home Energy Audit -- Our experienced, BPI-certified energy auditor will test your home and prepare a detailed list of energy efficiency modifications recommended for your specific home, lifestyle, and needs.  Our energy audit includes combustion safety testing, blower door test, and appliance and insulation evaluations.  Our goal is to provide you with objective information to serve as the basis for smart decision-making -- we are not there to sell you additional services.
+            </li>
+            <li>
+            <a class="name" href="http://homerci.com/">Home Remodelers Contracting, Inc.</a>
+            <address>6694 Amador Plaza Road, Dublin, California 94568 </address>
+            <span class="phone">925-551-7250</span>
+            <span class="email">dale.hrci@gmail.com</span>
+            <span class="solutions">Air Sealing and Ventilation, Insulation, High Efficiency Plumbing Fixtures, Solar Electric, Windows and Doors</span>
+            <span class="credentials">Home Performance with Energy Star</span>
+            <span class="serves">Residential and commercial customers</span>
+            liscense general contractor specializing in Window and door replacements, hole house remodeling, additions including all HVAC, electrical, plumbing and insulation. We also design,sell and install solar for residential, multi housing and light commercial.
+            </li>
+            <li>
+            <a class="name" href="http://www.cleansolar.com/">Clean Solar</a>
+            <address>302F Toyon Ave.  #249, San Jose, California 95127 </address>
+            <span class="phone">408-590-7350</span>
+            <span class="email">info@cleansolar.com</span>
+            <span class="solutions">Solar Electric</span>
+            <span class="serves">Residential and commercial customers</span>
+            “The fastest growing solar installation company in Northern California. Clean Solar offers the longest warranties and production guarantees in the industry. Clean Solar is the only solar installation company that teaches installation classes at a public school. We are top 10 rated by the Prime Buyer’s report. And Clean Solar offers the best no money down financing packages including the brand new PACE and California First Programs. Clean Solar will exceed all your expectations.”
+            </li>
+            <li>
+            <a class="name" href="http://www.theenerguy.com/">The Energuy</a>
+            <address>585 9th St., Ste #313, Oakland, California 94607 </address>
+            <span class="phone">1-877-600-0123</span>
+            <span class="email">info@theenerguy.com</span>
+            <span class="solutions">Energy Audit</span>
+            <span class="serves">Residential customers</span>
+            The Energuy is a team of Energy Raters that provide independent third party ratings and verification for homeowners and contractors.
+            </li>
+            <li>
+            <a class="name" href="http://www.basselectric.net/">BASS Electric</a>
+            <address>856 Folsom Street, San Francisco, California 94107 </address>
+            <span class="phone">415-295-1600</span>
+            <span class="email">rlee@basselectric.net</span>
+            <span class="solutions">Air Sealing and Ventilation, Energy Audit, Water Heating, Solar Electric, Heating and Cooling</span>
+            <span class="credentials">San Francisco Energy Watch</span>
+            <span class="serves">Residential and commercial customers</span>
+            BASS Electric is a full scale electrical contractor specializing in energy audits, solar design/engineering/installation, lighting upgrades and installation of fuel cells.  For larger commercial clients, BASS can provide preventive maintenance and energy storage solutions.  We have extensive experience working on commercial and residential properties.  BASS Electric has a customized Multi-Family Energy Management Platform.  We are a turnkey solution for residential and commercial building owners and have experience working with SF Energy Watch in handling rebates and incentives to make the process as manageable possible for our clients.
+            </li>
+            <li>
+            <a class="name" href="http://www.citizengreensolutions.com/">Citizen Green Solutions</a>
+            <address>900 College Ave, Santa Rosa, California 95404 </address>
+            <span class="phone">707-576-1000</span>
+            <span class="email">Info@CitizenGreenSolutions.com</span>
+            <span class="solutions">Solar Electric, Solar Thermal, Water Heating</span>
+            <span class="serves">Commercial customers</span>
+            Citizen Green Solutions (www.CitizenGreenSolutions.com) provides financial consulting, system design, and installation of commercial grade solar thermal and photovoltaic (PV) systems. The company specializes in renewable energy solutions combining legal, tax, and accounting expertise with real-estate development experience, to provide an innovative financial modeling approach.
+            </li>
+            <li>
+            <a class="name" href="http://www.petersendean.com/">Petersen Dean Roofing &amp; Solar</a>
+            <address>7980 Enterprise Drive, Newark, California 94560 </address>
+            <span class="phone">408-219-3021</span>
+            <span class="email">bscott@petersendean.com</span>
+            <span class="solutions">Solar Electric, Reflective Roof Systems</span>
+            <span class="serves">Residential and commercial customers</span>
+            When it comes to your roof, there’s no one more qualified to repair it, replace it or add to it than PetersenDean. As a full-service roofing and solar contractor, our extensive experience completing complex residential and commercial projects means we not only understand your needs, but can meet them. From skilled project managers to courteous and motivated crews, we set the standard by which other roofing and solar companies are judged.
+            </li>
+            <li>
+            <a class="name" href="http://www.renewal.com/">American Home Renewal</a>
+            <address>310 Shaw Road, Suite A, South San Francisco, California 94080 </address>
+            <span class="phone">800-747-0272</span>
+            <span class="email">info@renewal.com</span>
+            <span class="solutions">Windows and Doors</span>
+            <span class="serves">Residential and commercial customers</span>
+            We are a family-run company that specializes in energy efficient window, door and siding replacement.  We offer an exclusive Satisfaction First! policy whereby we don't ask for any payment until you are completely happy with your remodel, ensuring a pleasant experience!
+            Diamond Certified Service Provider &amp; AAMA-certified Installation Masters!
+            </li>
+            <li>
+            <a class="name" href="http://www.charleswindows.com/">Charles Windows &amp; Exteriors</a>
+            <address>901 E Francisco Blvd, San Rafael, California 94901 </address>
+            <span class="phone">415-717-9155</span>
+            <span class="email">phil@charleswindows.com</span>
+            <span class="solutions">Windows and Doors</span>
+            <span class="credentials">BPI Certified Building Analyst Professional</span>
+            <span class="serves">Residential and commercial customers</span>
+            CHARLES Windows &amp; Exteriors provides replacement windows for residential and commercial property owners. We also are a leading provider/installer of siding and insulation.
+            </li>
+            <li>
+            <a class="name" href="http://www.tntconstructionsf.com/">TNT Construction</a>
+            <address>22 Richland Ave, San Francisco, California 94110 </address>
+            <span class="phone">415-867-5737</span>
+            <span class="email">tony@tntconstructionsf.com</span>
+            <span class="solutions">Air Sealing and Ventilation, High Efficiency Plumbing Fixtures, Insulation, Windows and Doors</span>
+            <span class="serves">Residential and commercial customers</span>
+            TNT is proud to be a part of San Francisco’s Green initiative.
+            Contact us and see how we can help you save energy and make your home more comfortable, beautiful and energy efficient.
+            TNT is a small local company that is dedicated to doing quality work at a fair price. We specialize in residential remodels and additions from a simple bathroom or kitchen remodel to adding additional square footage to an existing home. We offer energy saving services such as window replacements and insulation along with other energy saving upgrades to existing homes. TNT is a big fan of green building and recycling.
+            </li>
+            <li>
+            <a class="name" href="http://www.vista-solar.com/">Vista Solar</a>
+            <address>2985 Kifer Road, Santa Clara, California 95057 </address>
+            <span class="phone">408-844-7157</span>
+            <span class="email">sales@vista-solar.com</span>
+            <span class="solutions">Solar Electric</span>
+            <span class="serves">Residential and commercial customers</span>
+            Vista Solar is a family-owned and operated Northern California renewable energy systems integrator. We have our headquarters in Santa Clara, California, where we currently provide photovoltaic solar integration services to the greater Bay Area. Collectively, the Vista Solar Team has over two decades of experience working in the solar and renewable energy industry.
+            As your renewable energy partner, we are committed to helping you take control of your energy future with efficient, economical, clean power. It is our goal to offer excellence in service, quality, and pricing. With a pledge to achieve this goal through honesty, integrity, and sound business ethics, we strive to develop and maintain a lasting relationship with each of our customers.
+            </li>
+            <li>
+            <a class="name" href="http://www.recurve.com/">Recurve, Inc.</a>
+            <address>1167 Mission Street, San Francisco, California 94103 </address>
+            <span class="phone">415-294-5380 x-111</span>
+            <span class="email">sales@recurve.com</span>
+            <span class="solutions">Air Sealing and Ventilation, Insulation, Safety, Heating and Cooling, Energy Audit, Water Heating, Solar Thermal, Windows and Doors</span>
+            <span class="credentials">Home Performance with Energy Star, BPI Accredited Company, BPI Certified Building Analyst Professional, BPI Certified Envelope Professional, BPI Certified Heating Professional</span>
+            <span class="serves">Residential customers</span>
+            Recurve is a nationally-renowned leader in home energy audits and green energy remodeling. We use building science to transform the comfort, energy efficiency, and air quality of your home.  In addition to science-based home performance testing and evaluation, Recurve offers a wide range of construction services. We are a true turnkey operation, and our aim is to make it easy for you to bring your house up to Energy Star efficiency levels, while at the same time making your home more healthy and comfortable.  Recurve was recently named 3rd among Fast Company’s 2010 ranking of the World’s Most Innovative Companies in Energy Efficiency.  In December of 2009, Recurve was ranked as 13th among the Bay Area's fastest growing private companies.
+            </li>
+            <li>
+            <a class="name" href="http://www.sdi-insulation.com/">SDI Insulation, Inc.</a>
+            <address>370 Lang Road, Burlingame, California 94010 </address>
+            <span class="phone">650-685-5500</span>
+            <span class="email">sdelorenzi@sdi-insulation.com</span>
+            <span class="solutions">Air Sealing and Ventilation, Insulation, Energy Audit</span>
+            <span class="serves">Residential and commercial customers</span>
+            Full Service Insulation Contractor.  Remodels &amp; Retrofits.  SDI is an applicator for Home Energy Audit Work.  Attic, Wall, &amp;  Floor Insulation. Removals of all Insulation.  Air sealing, Batt, Blown &amp; Spray Foam Experts. Thermal Imaging, Budgets for Solar, PG&amp;E Rebates and Federal Tax Credits available.
+            </li>
+            <li>
+            <a class="name" href="http://greenhomesavvy.com/">Green Home Savvy</a>
+            <address>116 Portsmouth Drive, Novato, California 94949 </address>
+            <span class="phone">415-250-7515</span>
+            <span class="email">donn@greenhomesavvy.com</span>
+            <span class="solutions">Energy Audit</span>
+            <span class="serves">Residential customers</span>
+            Green Home Savvy offers home energy assessments with recommendations for energy retrofits, and is qualified under the San Francisco Green Finance program.
+            We have:
+            BPI-certified Building Analysts and CBPCA Home Performance Analysts.
+            HERS raters and Certified Energy Plans Examiners
+            </li>
+            <li>
+            <a class="name" href="http://www.jonesenergysolutions.com/">Jones Energy Solutions</a>
+            <address>201 Spear Street, Suite 1100, San Francisco, California 94105 </address>
+            <span class="phone">(415) 946-4015</span>
+            <span class="email">jonesenergysolutions@gmail.com</span>
+            <span class="solutions">Safety, Energy Audit</span>
+            <span class="credentials">BPI Certified Building Analyst Professional</span>
+            <span class="serves">Residential customers</span>
+            We at Jones Energy Solutions are BPI Certified Building Analyst Professionals, ensuring the highest quality standards and procedures are implemented for the evaluation of your home's energy performance. We provide comprehensive home energy audits and generate recommendations for energy efficiency retrofit opportunities. Our main goal is not only to find solutions to help homeowners save money on energy bills, but to balance each home to help the quality of our environment, and most importantly to promote the overall well being of the homeowner's comfort, health, and safety. Call us today for your home energy audit.
+            </li>
+            <li>
+            <a class="name" href="http://ultimatehomeperformance.com/">Ultimate Home Performance</a>
+            <address>3019 Monticello Ave, Oakland, California 94619 </address>
+            <span class="phone">510-936-1212</span>
+            <span class="email">ultimatehomeperformance@gmail.com</span>
+            <span class="solutions">Energy Audit</span>
+            <span class="credentials">BPI Certified Building Analyst Professional, BPI Certified Envelope Professional</span>
+            <span class="serves">Residential customers</span>
+            Call us to schedule your energy evaluation. Ultimate Home Performance offers full service energy audits that include infiltration testing, duct leakage testing, combustion safety testing, insulation evaluations and lighting assessments. Tired of drafty rooms and uncomfortable temperature extremes? "A proper diagnosis will always precede an effective prescription". We can show you how to maximize your family's comfort and health while decreasing your monthly energy costs.
+            </li>
+            <li>
+            <a class="name" href="http://www.atlasheat.com/">TUCK AIRE HEATING</a>
+            <address>340 ROEBLING, South San Francisco, California 94080 </address>
+            <span class="phone">650-873-7000</span>
+            <span class="email">KHALAF@ATLASHEAT.COM</span>
+            <span class="solutions">Heating and Cooling</span>
+            <span class="serves">Residential and commercial customers</span>
+            We only install top-quality, high-performance systems that meet the specific needs of your home (family), office, and climate. Specializing in Heating Systems • Air Conditioning • Duct Work • Service Repair • Maintenance • Air Duct Cleaning • Custom Registers.
+            </li>
+            <li>
+            <a class="name" href="http://www.newsolarinc.com/">New Solar Inc</a>
+            <address>1525 McCarthy Blvd, Suite 1000, Milpitas, California 95035 </address>
+            <span class="phone">510-712-0900</span>
+            <span class="email">info@newsolarinc.com</span>
+            <span class="solutions">Solar Electric, Energy Audit</span>
+            <span class="credentials">BPI Certified Building Analyst Professional</span>
+            <span class="serves">Residential and commercial customers</span>
+            Install solar photovoltaic systems on your roof top and start saving on your electricity bill. We offer installation of industry-leading solar photovoltaic systems on residential and commercial buildings. We can give your building a comprehensive energy efficiency audit, and follow up with retrofit service to improve your energy efficiency. Our professional and friendly staff serves our clients in San Francisco, the Bay Area, and the rest of California. Visit our website at www.newsolarinc.com.
+            </li>
+        </ul>
 
     <script type="text/template" id="checkboxrow_template">
         <label>
