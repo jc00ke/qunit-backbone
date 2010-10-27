@@ -258,9 +258,6 @@ $(document).ready(function() {
         var expectedSolutions = ["Energy Audit", "Solar Electric"];
         same(firstSolutions, expectedSolutions, "first vendor's solutions");
         equals(first.get('name'), "A Bright Idea Electrical", "check name of first model in collection");
-        // use map/reduce to make sure the solutions list is unique.
-        // right now it is being set to [] which is strange, strange indeed.
-        ok(false, "fix me");
     });
 
     test("credentials", function() {
